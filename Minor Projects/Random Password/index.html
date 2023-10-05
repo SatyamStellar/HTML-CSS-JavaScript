@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/dist/output.css" />
+  </head>
+  <body class="box-border p-0 m-0 bg-slate-700">
+    <div class="w-2/6 ml-24 mt-60 font-poppin">
+      <h3 class="text-4xl font-extrabold text-white">Generate a</h3>
+      <h1 class="text-5xl font-extrabold text-green-700 underline">
+        Random Password
+      </h1>
+      <div
+        class="flex items-center justify-between w-[100%] p-4 px-6 mt-8 bg-white rounded-lg"
+      >
+        <input
+          type="text"
+          placeholder="Password"
+          id="pass-box"
+          class="w-full outline-none"
+        />
+        <i id="copy-btn" class="fa-regular fa-copy"></i>
+      </div>
+      <div id="gen-btn" class="flex items-center justify-end mt-5 cursor-pointer ">
+        <div class="items-center inline-block p-3 bg-green-700 rounded-md">
+          <i class="fa-solid fa-bolt-lightning" style="color: #ffffff"></i>
+          <button class="outline-none">Generate</button>
+        </div>
+      </div>
+    </div>
+    <script
+      src="https://kit.fontawesome.com/d2816e204d.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="index.js"></script>
+  </body>
+</html>
