@@ -9,28 +9,78 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;900&display=swap" rel="stylesheet" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    .input-box input:focus~label,
+    .input-box input:valid~label
+    {
+        top: -5px;
+    }
+  </style>
 </head>
 
-<body class="m-[0] p-[0] font-poppin box-border">
-  <header class="fixed z-50 flex items-center justify-between w-full px-24 bg-blue-700 h-14">
+<body
+  class="flex items-center justify-center w-full h-full min-h-screen bg-center bg-no-repeat bg-cover font-poppin bg-jungle">
+  <header class="fixed top-0 left-0 z-50 flex items-center justify-between w-full px-24 pt-3 h-14">
     <h1 class="text-2xl font-bold text-white">
       Satyam <span class="text-[18px] text-primary">Staller</span>
     </h1>
     <nav class="nav-bar">
-      <a class="relative text-white ml-9 after:transition-transform duration-1000 after:absolute after:w-full after:content-[' '] after:left-0 after:h-[3px] after:bg-white after:border after:rounded-md after:bottom-[-6px] after:scale-x-0 hover:after:scale-x-100"
+      <a class="relative text-white ml-9 after:origin-right after:transition-transform duration-1000 after:absolute after:w-full after:content-[' '] after:left-0 after:h-[3px] after:bg-white after:border after:rounded-md after:bottom-[-6px] after:scale-x-0 hover:after:origin-left hover:after:scale-x-100"
         href="#">Home</a>
-      <a class="relative text-white ml-9 after:transition-transform duration-1000  after:absolute after:w-full after:content-[' '] after:left-0 after:h-[3px] after:bg-white after:border after:rounded-md after:bottom-[-6px] after:scale-x-0 hover:after:scale-x-100"
+      <a class="relative text-white ml-9 after:origin-right after:transition-transform duration-1000 after:absolute after:w-full after:content-[' '] after:left-0 after:h-[3px] after:bg-white after:border after:rounded-md after:bottom-[-6px] after:scale-x-0 hover:after:origin-left hover:after:scale-x-100"
         href="#">About</a>
-      <a class="relative text-white ml-9 after:transition-transform duration-1000 after:absolute after:w-full after:content-[' '] after:left-0 after:h-[3px] after:bg-white after:border after:rounded-md after:bottom-[-6px] after:scale-x-0 hover:after:scale-x-100"
+      <a class="relative text-white ml-9 after:origin-right after:transition-transform duration-1000 after:absolute after:w-full after:content-[' '] after:left-0 after:h-[3px] after:bg-white after:border after:rounded-md after:bottom-[-6px] after:scale-x-0 hover:after:origin-left hover:after:scale-x-100"
         href="#">Services</a>
-      <a class="relative text-white ml-9 after:transition-transform duration-1000 after:absolute after:w-full after:content-[' '] after:left-0 after:h-[3px] after:bg-white after:border after:rounded-md after:bottom-[-6px] after:scale-x-0 hover:after:scale-x-100"
+      <a class="relative text-white ml-9 after:origin-right after:transition-transform duration-1000 after:absolute after:w-full after:content-[' '] after:left-0 after:h-[3px] after:bg-white after:border after:rounded-md after:bottom-[-6px] after:scale-x-0 hover:after:origin-left hover:after:scale-x-100"
         href="#">Contact</a>
       <button
-        class="p-2 px-4 ml-3 text-sm font-medium text-white transition duration-300 ease-in-out bg-transparent border-2 border-white rounded-md outline-none cursor-pointer hover:text-black hover:bg-white login-btn">
+        class="p-2 px-6 ml-6 text-sm font-medium text-white transition duration-300 ease-in-out bg-transparent border-2 border-white rounded-md outline-none cursor-pointer hover:text-black hover:bg-white login-btn">
         Login
       </button>
     </nav>
   </header>
+  <div
+    class="border-2 border-solid wrapper border-primary w-[400px] relative rounded-lg backdrop-blur-lg drop-shadow-2xl flex items-center justify-center h-[440px]">
+    <div class="w-full p-10 form-box login">
+      <h2 class="font-bold top-1 text-[#1e143b] text-3xl text-center">Login</h2>
+      <form action="#">
+        <div class="relative w-full h-12 mx-2 border-b-2 border-solid input-box border-slate-800 ">
+          <span class="absolute right-2 top-6 icon">
+            <i class="fa-solid fa-envelope"></i>
+          </span>
+          <input type="email" class="absolute w-full h-full bg-transparent border-none outline-none top-2 "
+            required />
+          <label
+            class="absolute translate-y-1/2 top-4 left-[5px] text-sm text-[#1e143B] font-[500] pointer-events-none " >Email</label>
+        </div>
+        <div class="relative w-full h-12 mx-2 border-b-2 border-solid input-box border-slate-800 ">
+          <span class="absolute right-2 top-6 icon">
+            <i class="fa-solid fa-lock"></i>
+          </span>
+          <input type="password" class="absolute w-full h-full bg-transparent border-none outline-none top-2 "
+            required />
+          <label
+            class="absolute translate-y-1/2 top-4 left-[5px] text-sm text-[#1e143B] font-[500] pointer-events-none ">Password</label>
+        </div>
+        <div class="login-registers">
+          <label><input type="checkbox" />Remeber me</label>
+          <a href="#">Forget Password ?</a>
+        </div>
+        <button type="submit" class="btn">Login</button>
+        <div class="login-register">
+          <p>
+            Don't have a account?
+            <a href="#" class="register-link">Register</a>
+          </p>
+        </div>
+      </form>
+    </div>
+  </div>
   <script src="https://kit.fontawesome.com/d2816e204d.js" crossorigin="anonymous"></script>
 </body>
 
