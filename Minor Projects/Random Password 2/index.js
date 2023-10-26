@@ -40,3 +40,12 @@ const copyPass = () => {
 copyBtn.addEventListener("click", copyPass);
 rangeNum.addEventListener("input", updateSlider);
 genbtn.addEventListener("click", genPass);
+
+
+
+var typed = new Typed("#typed", {
+    strings: ['Generator', '_+4Ot%b08', '1{M$+2fB8'],
+    typeSpeed: 80, 
+    backSpeed: 50,
+    loop: true        
+});
