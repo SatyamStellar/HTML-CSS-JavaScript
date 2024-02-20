@@ -1,0 +1,25 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+html,body{
+    width: 100%;
+    height: 100%;
+}
+
+.page-2 .relative .animation-div::-webkit-scrollbar{
+    display: none;
+}
+
+.imgs{
+    animation: scroll 7s linear  infinite ;
+}
+@keyframes scroll {
+    from{
+        transform: translateX(0%);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+}
