@@ -4,33 +4,33 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Page Selector</title>
-    <!-- Link to your local style.css file -->
-    <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="/src/output.css">
+    <link rel="stylesheet" href="./style.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <script src="./index.js" defer></script>
 </head>
 <body class="flex items-center justify-center bg-gray-900">
     <div class="container relative flex items-center justify-center w-4/12 px-3 bg-gray-500 rounded-md">
-        <button class="p-1 px-2 m-1 bg-gray-400 rounded-sm button hover:bg-slate-800">
+        <button class="p-1 px-2 m-1 bg-gray-400 rounded-sm button hover:bg-slate-800 disabled" id="srt-Btn" disabled>
             <i class=" fas fa-angles-left"></i>
         </button>
-        <button class="p-1 px-2 m-1 bg-gray-400 rounded-sm button hover:bg-slate-800">
+        <button class="p-1 px-2 m-1 bg-gray-400 rounded-sm button hover:bg-slate-800 disabled" id="pre-Btn" disabled>
             <i class=" fas fa-chevron-left"></i>
         </button>
         <div class="mx-2 links">
-            <a class="px-2 mx-1 rounded-sm bg-slate-400 hover:bg-slate-700" href="1">1</a>
-            <a class="px-2 mx-1 rounded-sm bg-slate-400 hover:bg-slate-700" href="2">2</a>
-            <a class="px-2 mx-1 rounded-sm bg-slate-400 hover:bg-slate-700" href="3">3</a>
-            <a class="px-2 mx-1 rounded-sm bg-slate-400 hover:bg-slate-700" href="4">4</a>
-            <a class="px-2 mx-1 rounded-sm bg-slate-400 hover:bg-slate-700" href="5">5</a>
-            <a class="px-2 mx-1 rounded-sm bg-slate-400 hover:bg-slate-700" href="6">6</a>
-            <a class="px-2 mx-1 rounded-sm bg-slate-400 hover:bg-slate-700" href="7">7</a>
-            <a class="px-2 mx-1 rounded-sm bg-slate-400 hover:bg-slate-700" href="8">8</a>
+            <a class="px-2 mx-1 rounded-sm numbers hover:bg-slate-700 active " href="#">1</a>
+            <a class="px-2 mx-1 rounded-sm numbers hover:bg-slate-700" href="#">2</a>
+            <a class="px-2 mx-1 rounded-sm numbers hover:bg-slate-700" href="#">3</a>
+            <a class="px-2 mx-1 rounded-sm numbers hover:bg-slate-700" href="#">4</a>
+            <a class="px-2 mx-1 rounded-sm numbers hover:bg-slate-700" href="#">5</a>
+            <a class="px-2 mx-1 rounded-sm numbers hover:bg-slate-700" href="#">6</a>
+            <a class="px-2 mx-1 rounded-sm numbers hover:bg-slate-700" href="#">7</a>
+            <a class="px-2 mx-1 rounded-sm numbers hover:bg-slate-700" href="#">8</a>
         </div>
-        <button class="p-1 px-2 m-1 bg-gray-400 rounded-sm button hover:bg-slate-800">
+        <button class="p-1 px-2 m-1 bg-gray-400 rounded-sm button hover:bg-slate-800" id="nxt-Btn"> 
             <i class=" fas fa-chevron-right"></i>
         </button>
-        <button class="p-1 px-2 m-1 bg-gray-400 rounded-sm button hover:bg-slate-800">
+        <button class="p-1 px-2 m-1 bg-gray-400 rounded-sm button hover:bg-slate-800" id="end-Btn">
             <i class=" fas fa-angles-right"></i>
         </button>
     </div>

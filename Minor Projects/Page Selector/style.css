@@ -10,3 +10,14 @@ html ,body{
     width: 100%;
     height: 100%;
 }
+.button.disabled{
+    color: #b3b3b3;
+    pointer-events: none;
+}
+
+.numbers{
+    background-color: rgb(148 163 184 );
+}
+.links.active{
+    background-color: rgb(51 65 85 );
+}
