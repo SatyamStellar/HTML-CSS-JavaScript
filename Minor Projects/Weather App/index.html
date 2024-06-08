@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Weather App</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+    </style>
+    <script src="./main.js" defer></script>
+</head>
+
+<body class="flex items-center justify-center w-screen h-screen bg-zinc-900">
+    <div class="w-2/6 p-6 text-center rounded-md card bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 ">
+        <div class="flex items-center justify-center search ">
+            <input type="text" placeholder="Enter cityname" spellcheck="false" class="w-2/3 p-2 m-2 rounded-full" id="input-city">
+            <button class="flex items-center justify-center w-10 h-10 text-center bg-white rounded-full " id="searchbtn"><img
+                    class="w-5 h-auto" src="/images/search.png" alt=""></button>
+        </div>
+        <div class="flex flex-col items-center justify-center hidden gap-4 weather" id="weather">
+            <img src="" class="w-36 " alt="" id="wether-image">
+            <h1 class="text-6xl font-semibold text-white temp" id="temp"></h1>
+            <h2 class="text-2xl text-white " id="city-name"></h2>
+            <div class="flex items-center justify-between w-11/12 detailes">
+                <div class="flex items-center justify-between col">
+                    <img src="./images/humidity.png" class="w-14 " alt="">
+                    <div class="flex flex-col items-start m-2 text-white">
+                        <p class="text-xl font-semibold " id="humidity"></p>
+                        <p class="text-lg">Humidity</p>
+                    </div>
+                </div>
+                <div class="flex items-center justify-between col">
+                    <img src="./images/wind.png" alt="" class="w-14">
+                    <div class="flex flex-col items-start m-2 text-white">
+                        <p class="text-xl font-semibold wind " id="windspeed"></p>
+                        <p class="text-lg" >Wind Speed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
