@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="icon" href="/assets/imgs/Orter-Mald.png">
+    <link rel="stylesheet" href="/src/output.css">
+    <script defer src="/main.js"></script>
+
+</head>
+
+<body class="text-white bg-primary-BG font-Poppiness">
+    <header
+        class="fixed top-0 left-0 z-50 flex items-center justify-between w-full py-5 bg-[#121212] backdrop-filter backdrop-blur-md px-36 header ">
+        <div class="transition duration-100 ease-in transform hover:text-primary hover:scale-110">
+            <a href="" class="text-xl font-extrabold logo font-Outfit">
+                Satyam Stellar
+            </a>
+        </div>
+        <div class="nav-bar ">
+            <ul class="flex gap-10 ">
+                <li><a href=""
+                        class="text-base border-b-[3px] border-b-transparent font-semibold hover:border-b-[3px] active transition ease-in duration-100 hover:border-b-primary hover:text-primary nav-link">Home</a>
+                </li>
+                <li><a href="#services"
+                        class="text-base border-b-[3px] border-b-transparent nav-link font-semibold hover:border-b-[3px transition ease-in duration-100 hover:border-b-primary hover:text-primary">Services</a>
+                </li>
+                <li><a href="#projects"
+                        class="text-base border-b-[3px] border-b-transparent font-semibold hover:border-b-[3px transition ease-in duration-100 hover:border-b-primary hover:text-primary nav-link">Projects</a>
+                </li>
+                <li><a href="#education"
+                        class="text-base border-b-[3px] border-b-transparent font-semibold hover:border-b-[3px transition ease-in duration-100 hover:border-b-primary hover:text-primary nav-link">Education</a>
+                </li>
+                <li><a href="#contact"
+                        class="text-base border-b-[3px] border-b-transparent font-semibold hover:border-b-[3px transition ease-in duration-100 hover:border-b-primary hover:text-primary nav-link ">Contact</a>
+                </li>
+                <div class="md:hidden">
+                    <i class="hidden fa-solid fa-bars" id="menu-icon"></i>
+                </div>
+            </ul>
+        </div>
+    </header>
+    <section class="flex  items-center p-12 justify-center min-h-[100vh]  home basis-2">
+        <div class="ml-12 text-sec">
+            <h1 class="text-6xl font-bold mb- font-Outfit">Hi, It's <span class="text-primary">Satyam</span></h1>
+            <h2 class="mt-2 text-3xl font-semibold font-Outfit">I'm a <span class="text-primary" id="element"></span>
+            </h2>
+            <p class="mt-6 font-Outfit">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugit quam
+                <br> mollitia blanditiis unde porro libero at necessitatibus, iure id sunt quidem
+            </p>
+            <ul class="flex gap-3 py-4">
+                <li><a href=""><i
+                            class="p-2 text-xl transition duration-75 ease-in transform border rounded-full hover:scale-110 text-primary hover:shadow-center-1 fa-brands fa-github"></i></a>
+                </li>
+                <li><a href=""><i
+                            class="p-2 text-xl transition duration-75 ease-in transform border rounded-full hover:scale-110 text-primary hover:shadow-center-1 fa-brands fa-instagram"></i></a>
+                </li>
+                <li><a href=""><i
+                            class="p-2 text-xl transition duration-75 ease-in transform border rounded-full hover:scale-110 text-primary hover:shadow-center-1 fa-brands fa-reddit-alien"></i></a>
+                </li>
+                <li><a href=""><i
+                            class="p-2 text-xl transition duration-75 ease-in transform border rounded-full hover:scale-110 text-primary hover:shadow-center-1 fa-brands fa-linkedin"></i></a>
+                </li>
+            </ul>
+            <div class="flex items-center justify-start">
+                <a href=""
+                    class="px-4 py-1 tracking-widest transition-all duration-100 ease-in transform border text-2 xl rounded-2xl text-primary hover:shadow-center-1 hover:scale-110 ">Hire</a>
+            </div>
+        </div>
+        <div class="flex items-center justify-center ml-24 transform img-sec ">
+            <img src="/assets/imgs/Orter-Mald.png" alt=""
+                class="object-cover w-3/4 transition duration-200 ease-in transform rounded-[100%] cursor-pointer hover:scale-105 shadow-center shadow-primary hover:shadow-center-hover">
+        </div>
+    </section>
+    <section id="services" class="mx-24 mt-10 mb-36 sevices">
+        <h2 class="mb-10 text-6xl font-bold text-center font-Poppiness">
+            Services
+        </h2>
+        <div class="flex gap-5 sm:flex-col md:flex-row ser-con">
+            <div
+                class="flex flex-col gap-6 border-[3px] rounded-xl border-primary items-center justify-center h-[400px] ser-box hover:text-black  hover:bg-gray-500 hover:cursor-pointer duration-200">
+                <i class="text-5xl text-primary fa-solid fa-palette"></i>
+                <h3 class="text-xl font-semibold font-Outfit">Web Design
+                </h3>
+                <p class="mx-6 text-sm text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ab
+                    officia at iure, sequi hic.</p>
+                <div class="flex items-center justify-start">
+                    <a href=""
+                        class="px-4 py-1 font-semibold tracking-widest transition-all duration-100 ease-in transform border rounded-2xl text-primary hover:shadow-center-1 hover:scale-110 hover:bg-black ">Learn
+                        More</a>
+                </div>
+            </div>
+
+            <div
+                class=" flex flex-col gap-6 border-[3px] rounded-xl border-primary items-center justify-center h-[400px] ser-box hover:text-black  hover:bg-gray-500 hover:cursor-pointer duration-200">
+                <i class="text-5xl text-primary fa-solid fa-code"></i>
+                <h3 class="text-xl font-semibold font-Outfit">Frontend Developement
+                </h3>
+                <p class="mx-6 text-sm text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ab
+                    officia at iure, sequi hic.</p>
+                <div class="flex items-center justify-start">
+                    <a href=""
+                        class="px-4 py-1 font-semibold tracking-widest transition-all duration-100 ease-in transform border rounded-2xl text-primary hover:shadow-center-1 hover:scale-110 hover:bg-black ">Learn
+                        More</a>
+                </div>
+            </div>
+            <div
+                class=" flex flex-col gap-6 border-[3px] rounded-xl border-primary items-center justify-center h-[400px] ser-box hover:text-black  hover:bg-gray-500 hover:cursor-pointer duration-200">
+                <i class="text-5xl text-primary fa-solid fa-server"></i>
+                <h3 class="text-xl font-semibold font-Outfit">
+                    Backend Developement
+                </h3>
+                <p class="mx-6 text-sm text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem ab
+                    officia at iure, sequi hic.</p>
+                <div class="flex items-center justify-start">
+                    <a href=""
+                        class="px-4 py-1 font-semibold tracking-widest transition-all duration-100 ease-in transform border rounded-2xl text-primary hover:shadow-center-1 hover:scale-110 hover:bg-black ">Learn
+                        More</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-8 mx-24 mt-10 projects" id="projects">
+        <h2 class="mb-10 text-6xl font-bold text-center font-Poppiness">Projects</h2>
+        <div class="grid grid-cols-3 gap-6 ">
+            <div class="">
+                <div
+                    class="h-[450px] rounded-lg relative  overflow-hidden hover:border-2 border-primary duration-100 group ease-in cursor-pointer ">
+                    <img src="/assets/imgs/monitors.jpg" alt=""
+                        class="absolute object-cover h-full duration-200 filter grayscale group-hover:filter-none group-hover:scale-105 group-hover:opacity-50">
+                    <div class="absolute flex flex-col items-center justify-center w-full h-full text-center">
+                        <h2 class="text-2xl font-extrabold text-primary font-Outfit">Graphic Desinger</h2>
+                        <p class="text-base font-bold text-primary">Lorem ipsum dolor sit amet consectetur. Lorem ipsum
+                            dolor sit amet.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div
+                    class="h-[450px] rounded-lg relative  overflow-hidden hover:border-2 border-primary duration-100 group ease-in cursor-pointer ">
+                    <img src="/assets/imgs/laptop.jpg" alt=""
+                        class="absolute object-cover h-full duration-200 filter grayscale group-hover:filter-none group-hover:scale-105 group-hover:opacity-50">
+                    <div class="absolute flex flex-col items-center justify-center w-full h-full text-center">
+                        <h2 class="text-2xl font-extrabold text-primary font-Outfit">Frontend Developement</h2>
+                        <p class="text-base font-bold text-primary">Lorem ipsum dolor sit amet consectetur. Lorem ipsum
+                            dolor sit amet.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="">
+                <div
+                    class="h-[450px] rounded-lg relative  overflow-hidden hover:border-2 border-primary duration-100 group ease-in cursor-pointer">
+                    <img src="/assets/imgs/laptop2.jpg" alt=""
+                        class="absolute object-cover h-full duration-200 filter grayscale group-hover:filter-none group-hover:scale-105 group-hover:opacity-50">
+                    <div class="absolute flex flex-col items-center justify-center w-full h-full text-center">
+                        <h2 class="text-2xl font-extrabold text-primary font-Outfit">Backend Developement</h2>
+                        <p class="text-base font-bold text-primary">Lorem ipsum dolor sit amet consectetur. Lorem ipsum
+                            dolor sit amet.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section class="py-8 mx-24 mt-10 education" id="education">
+        <h2 class="mb-10 text-6xl font-bold text-center font-Poppiness">Education</h2>
+        <div class="relative flex flex-wrap max-w-[1000px] m-auto line-items">
+            <div class="relative w-full mb-10 line-item">
+                <div class="absolute w-5 h-5 rounded-full line-dots bg-primary shadow-center"></div>
+                <div class="text-base font-semibold line-dates font-Poppiness ">2019</div>
+                <div class="p-6 m-3 transition duration-200 ease-in border-2 rounded-md cursor-pointer border-primary bg-gray-950 line-content shadow-center-1 hover:scale-105 hover:shadow-center-hover-2">
+                    <h3 class="mb-2 text-sm font-extrabold font-Outfit text-primary">High School</h3>
+                    <p class="text-base font-bold font-Poppiness ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat ullam impedit ex ad perferendis quaerat consequatur nam magnam, facilis dolor!</p>
+                </div>
+            </div>
+            <div class="relative w-full mb-10 line-item">
+                <div class="absolute w-5 h-5 rounded-full line-dots bg-primary shadow-center"></div>
+                <div class="text-base font-semibold line-dates font-Poppiness ">2020</div>
+                <div class="p-6 m-3 transition duration-200 ease-in border-2 rounded-md cursor-pointer border-primary bg-gray-950 line-content shadow-center-1 hover:scale-105 hover:shadow-center-hover-2">
+                    <h3 class="mb-2 text-sm font-extrabold font-Outfit text-primary">Universtiy</h3>
+                    <p class="text-base font-bold font-Poppiness ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat ullam impedit ex ad perferendis quaerat consequatur nam magnam, facilis dolor!</p>
+                </div>
+            </div>
+            <div class="relative w-full mb-10 line-item">
+                <div class="absolute w-5 h-5 rounded-full line-dots bg-primary shadow-center"></div>
+                <div class="text-base font-semibold line-dates font-Poppiness ">202</div>
+                <div class="p-6 m-3 transition duration-200 ease-in border-2 rounded-md cursor-pointer border-primary bg-gray-950 line-content shadow-center-1 hover:scale-105 hover:shadow-center-hover-2">
+                    <h3 class="mb-2 text-sm font-extrabold font-Outfit text-primary">Intership</h3>
+                    <p class="text-base font-bold font-Poppiness ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat ullam impedit ex ad perferendis quaerat consequatur nam magnam, facilis dolor!</p>
+                </div>
+            </div>
+            <div class="relative w-full mb-10 line-item">
+                <div class="absolute w-5 h-5 rounded-full line-dots bg-primary shadow-center"></div>
+                <div class="text-base font-semibold line-dates font-Poppiness ">2021</div>
+                <div class="p-6 m-3 transition duration-200 ease-in border-2 rounded-md cursor-pointer border-primary bg-gray-950 line-content shadow-center-1 hover:scale-105 hover:shadow-center-hover-2">
+                    <h3 class="mb-2 text-sm font-extrabold font-Outfit text-primary">Job 1</h3>
+                    <p class="text-base font-bold font-Poppiness ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat ullam impedit ex ad perferendis quaerat consequatur nam magnam, facilis dolor!</p>
+                </div>
+            </div>
+            <div class="relative w-full mb-10 line-item">
+                <div class="absolute w-5 h-5 rounded-full line-dots bg-primary shadow-center"></div>
+                <div class="text-base font-semibold line-dates font-Poppiness ">2021</div>
+                <div class="p-6 m-3 transition duration-200 ease-in border-2 rounded-md cursor-pointer border-primary bg-gray-950 line-content shadow-center-1 hover:scale-105 hover:shadow-center-hover-2">
+                    <h3 class="mb-2 text-sm font-extrabold font-Outfit text-primary">Job 2</h3>
+                    <p class="text-base font-bold font-Poppiness ">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Repellat ullam impedit ex ad perferendis quaerat consequatur nam magnam, facilis dolor!</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="py-8 mx-24 mt-10 contact" id="contact">
+        <h2 class="mb-10 text-6xl font-bold text-center font-Poppiness">Contact <span class="text-primary">Me</span></h2>
+        <form action="#" class="w-[70rem] text-center ">
+            <div class="flex flex-wrap justify-center gap-5">
+                <input class="w-full p-2 text-base font-semibold border-2 rounded-md font-Poppiness bg-primary-BG border-primary active:border-primary" type="text" placeholder="Name">
+                <input class="w-full p-2 text-base font-semibold border-2 rounded-md font-Poppiness bg-primary-BG border-primary active:border-primary" type="email" placeholder="Email">
+                <input class="w-full p-2 text-base font-semibold border-2 rounded-md font-Poppiness bg-primary-BG border-primary active:border-primary" type="number" placeholder="Number">
+                <input class="w-full p-2 text-base font-semibold border-2 rounded-md font-Poppiness bg-primary-BG border-primary active:border-primary" type="text" placeholder="Subject">
+            </div>
+            <div>
+                <textarea class="w-full p-2 mt-4 text-base font-semibold border-2 rounded-md font-Poppiness bg-primary-BG border-primary active:border-primary" name="" id="" cols="30" rows="10" placeholder="Your Message"></textarea>
+            </div>
+        </form>
+        <div class="flex items-center justify-center mt-4">
+            <a href=""
+                class="px-4 py-1 font-semibold tracking-widest transition-all duration-100 ease-in transform border rounded-2xl text-primary hover:shadow-center-1 hover:scale-110 hover:bg-black ">Send Message</a>
+        </div>
+    </section>
+    <footer class="w-full footer h-32 bg-[#161616]">
+        <div class="flex items-center justify-center">
+            <ul class="flex gap-3 py-4">
+                <li><a href=""><i
+                            class="p-2 text-xl transition duration-75 ease-in transform border rounded-full hover:scale-110 text-primary hover:shadow-center-1 fa-brands fa-github"></i></a>
+                </li>
+                <li><a href=""><i
+                            class="p-2 text-xl transition duration-75 ease-in transform border rounded-full hover:scale-110 text-primary hover:shadow-center-1 fa-brands fa-instagram"></i></a>
+                </li>
+                <li><a href=""><i
+                            class="p-2 text-xl transition duration-75 ease-in transform border rounded-full hover:scale-110 text-primary hover:shadow-center-1 fa-brands fa-reddit-alien"></i></a>
+                </li>
+                <li><a href=""><i
+                            class="p-2 text-xl transition duration-75 ease-in transform border rounded-full hover:scale-110 text-primary hover:shadow-center-1 fa-brands fa-linkedin"></i></a>
+                </li>
+            </ul>
+        </div>
+        <div class="flex items-center justify-center gap-3 text-sm text-primary ">
+            <a class="duration-100 ease-in hover:text-base" href="#">FAQ's</a>
+            <a class="duration-100 ease-in hover:text-base" href="#">Services</a>
+            <a class="duration-100 ease-in hover:text-base" href="#">About Me</a>
+            <a class="duration-100 ease-in hover:text-base" href="#">Contact</a>
+            <a class="duration-100 ease-in hover:text-base" href="#">Privacy Policy</a>
+        </div>
+    </footer>
+    <script src="https://kit.fontawesome.com/d2816e204d.js" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+</body>
+
+</html>
