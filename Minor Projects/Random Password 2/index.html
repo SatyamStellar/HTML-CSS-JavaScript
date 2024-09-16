@@ -1,121 +1,208 @@
 <!DOCTYPE html>
 <html lang="en" class="w-screen h-screen">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Random Password</title>
     <script src="https://cdn.tailwindcss.com"></script>
 
     <!-- <link rel="stylesheet" href="/src/output.css" /> -->
-</head>
-<style>
+  </head>
+  <style>
     .check-box {
-        margin: 10px;
-        width: 1.3em;
-        height: 1.3em;
-        background-color: #BCBCBC;
-        border-radius: 50%;
-        vertical-align: middle;
-        border: 1px solid #ddd;
-        appearance: none;
-        -webkit-appearance: none;
-        outline: none;
-        cursor: pointer;
+      margin: 10px;
+      width: 1.3em;
+      height: 1.3em;
+      background-color: #bcbcbc;
+      border-radius: 50%;
+      vertical-align: middle;
+      border: 1px solid #ddd;
+      appearance: none;
+      -webkit-appearance: none;
+      outline: none;
+      cursor: pointer;
     }
 
     .check-box:checked {
-        background-color: #A7FF83;
+      background-color: #a7ff83;
     }
-    .range{
-        -webkit-appearance: none;
+    .range {
+      -webkit-appearance: none;
     }
-    .range::-webkit-slider-thumb{
-        -webkit-appearance: none;
-        background-color: #A7FF83;
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
+    .range::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      background-color: #a7ff83;
+      width: 15px;
+      height: 15px;
+      border-radius: 50%;
     }
-</style>
+  </style>
 
-<body class="w-screen h-screen overflow-hidden bg-center bg-no-repeat bg-cover"
-    style="background-image: url('./web-view.svg')">
+  <body
+    class="w-screen h-screen overflow-hidden bg-center bg-no-repeat bg-cover"
+    style="background-image: url('./web-view.svg')"
+  >
     <div class="flex items-center justify-center mt-36 text-container">
-        <h1 class="text-6xl font-semibold text-white font-poppin">
-            Hii..!! I am Your Password <span class="text-[#A7FF83]" id="typed"></span>
-        </h1>
+      <h1 class="text-6xl font-semibold text-white font-poppin">
+        Hii..!! I am Your Password
+        <span class="text-[#A7FF83]" id="typed"></span>
+      </h1>
     </div>
     <div class="flex items-center justify-center">
-        <div class="bg-[#262525] mt-14 border-[#A7FF83] rounded-2xl border-[3px] w-5/12 h-72">
-            <h2 class="p-4 pt-6 text-4xl font-semibold text-white font-poppin">
-                “<span class="text-[#A7FF83]">Create</span> strong passwords for
-                Better security”
-            </h2>
+      <div
+        class="bg-[#262525] mt-14 border-[#A7FF83] rounded-2xl border-[3px] w-5/12 h-72"
+      >
+        <h2 class="p-4 pt-6 text-4xl font-semibold text-white font-poppin">
+          “<span class="text-[#A7FF83]">Create</span> strong passwords for
+          Better security”
+        </h2>
 
-            <div class="bg-[#262525] ml-2 border-[#52D681] rounded-2xl border-[3px] w-9/12 h-12 flex items-center">
-                <div class="flex items-center justify-between w-full pl-3 bg-transparent rounded-lg">
-                    <input type="text" placeholder="GH87&*er%y"
-                        class="w-full pl-0 text-xl text-white bg-transparent outline-none font-poppin input-pass" />
+        <div
+          class="bg-[#262525] ml-2 border-[#52D681] rounded-2xl border-[3px] w-9/12 h-12 flex items-center"
+        >
+          <div
+            class="flex items-center justify-between w-full pl-3 bg-transparent rounded-lg"
+          >
+            <input
+              type="text"
+              placeholder="GH87&*er%y"
+              class="w-full pl-0 text-xl text-white bg-transparent outline-none font-poppin input-pass"
+            />
 
-                    <button class="justify-end p-2 copy-btn">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="27" viewBox="0 0 26 27" fill="none">
-                            <path
-                                d="M21.1491 7.92417C21.1951 8.62558 21.1376 9.41899 20.9996 10.3044L20.1602 15.6972C19.4473 20.1931 17.366 21.711 12.8701 21.0095L7.47726 20.1586C5.92495 19.9172 4.7291 19.5032 3.85521 18.8823C2.18792 17.721 1.70498 15.8122 2.16492 12.8686L3.01582 7.47573C3.72873 2.97979 5.80997 1.46197 10.3059 2.16339L15.6987 3.01428C19.3093 3.57771 20.9996 5.04953 21.1491 7.92417Z"
-                                stroke="#83A18D" stroke-width="2.32" stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                                d="M23.2994 15.1913L21.5746 20.3772C20.1373 24.7007 17.8375 25.8505 13.5141 24.4132L8.32825 22.6884C5.71808 21.826 4.26926 20.6302 3.85531 18.8824C4.7292 19.5033 5.92505 19.9173 7.47736 20.1587L12.8702 21.0096C17.3661 21.711 19.4473 20.1932 20.1602 15.6973L20.9996 10.3045C21.1376 9.41906 21.1951 8.62566 21.1491 7.92425C23.8973 9.38457 24.4952 11.5923 23.2994 15.1913Z"
-                                stroke="#83A18D" stroke-width="2.32" stroke-linecap="round" stroke-linejoin="round" />
-                            <path
-                                d="M9.20204 10.0285C10.307 10.0285 11.2028 9.13274 11.2028 8.02775C11.2028 6.92276 10.307 6.027 9.20204 6.027C8.09705 6.027 7.20129 6.92276 7.20129 8.02775C7.20129 9.13274 8.09705 10.0285 9.20204 10.0285Z"
-                                stroke="#83A18D" stroke-width="2.32" stroke-linecap="round" stroke-linejoin="round" />
-                        </svg>
-                    </button>
-                </div>
-            </div>
-            <h4 class="pt-4 pb-1 pl-4 font-semibold text-white">
-                Password Length :
-            </h4>
-            <div class="absolute z-10 flex items-center h-4 mt-1 ml-8">
-                <div class="absolute w-3 h-3 transform bg-[#D4D4D4] rounded-full left-1"></div>
-                <div class="absolute text-base text-[#D4D4D4] -left-4 rang-value">
-                    4
-                </div>
-                <input type="range" min="4" max="24" value="4" step="1"
-                    class="mx-2 ml-3 w-full h-[2px] outline-none border-none rounded-full range" />
-                <div class="absolute w-3 h-3 transform bg-[#D4D4D4] rounded-full left-[8.5rem]"></div>
-            </div>
-            <div class="flex items-center justify-between mt-8 ml-4 text-sm text-[#838383] w-72 font-semibold">
-                <label class="z-30 flex items-center justify-center pointer-events-none option" for="ABC">ABC<input
-                        style="background-image:url(./check.svg);" id="uppercases"
-                        class="bg-center bg-no-repeat bg-cover check-box" type="checkbox" checked   ></label>
-                <label class="z-30 flex items-center justify-center option" for="abc">abc <input style="background-image: url(./check.svg);" id="lowercases" class="bg-center bg-no-repeat bg-cover check-box"
-                        type="checkbox" /></label>
-                <label class="z-30 flex items-center justify-center option" for="num">123<input style="background-image: url(./check.svg);" id="numbers" class="bg-center bg-no-repeat bg-cover check-box"
-                        type="checkbox" /></label>
-                <label class="z-30 flex items-center justify-center option" for="sym">@#$<input style="background-image: url(./check.svg);" id="symbols" class="bg-center bg-no-repeat bg-cover check-box"
-                        type="checkbox" /></label>
-            </div>
-            <div class="relative flex justify-end bottom-16 -left-11">
-                <button class="w-10 flex items-center justify-center h-10 rounded-full bg-[#52D681] active:animate-spin active:bg-green-700 gen-btn">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" viewBox="0 0 26 26" fill="none">
-                        <path
-                            d="M24 13C24 19.072 19.072 24 13 24C6.928 24 3.221 17.884 3.221 17.884M3.221 17.884H8.193M3.221 17.884V23.384M2 13C2 6.928 6.884 2 13 2C20.337 2 24 8.116 24 8.116M24 8.116V2.616M24 8.116H19.116"
-                            stroke="white" stroke-opacity="0.8" stroke-width="2.97" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-                </button>
-            </div>
+            <button class="justify-end p-2 copy-btn">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="26"
+                height="27"
+                viewBox="0 0 26 27"
+                fill="none"
+              >
+                <path
+                  d="M21.1491 7.92417C21.1951 8.62558 21.1376 9.41899 20.9996 10.3044L20.1602 15.6972C19.4473 20.1931 17.366 21.711 12.8701 21.0095L7.47726 20.1586C5.92495 19.9172 4.7291 19.5032 3.85521 18.8823C2.18792 17.721 1.70498 15.8122 2.16492 12.8686L3.01582 7.47573C3.72873 2.97979 5.80997 1.46197 10.3059 2.16339L15.6987 3.01428C19.3093 3.57771 20.9996 5.04953 21.1491 7.92417Z"
+                  stroke="#83A18D"
+                  stroke-width="2.32"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M23.2994 15.1913L21.5746 20.3772C20.1373 24.7007 17.8375 25.8505 13.5141 24.4132L8.32825 22.6884C5.71808 21.826 4.26926 20.6302 3.85531 18.8824C4.7292 19.5033 5.92505 19.9173 7.47736 20.1587L12.8702 21.0096C17.3661 21.711 19.4473 20.1932 20.1602 15.6973L20.9996 10.3045C21.1376 9.41906 21.1951 8.62566 21.1491 7.92425C23.8973 9.38457 24.4952 11.5923 23.2994 15.1913Z"
+                  stroke="#83A18D"
+                  stroke-width="2.32"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M9.20204 10.0285C10.307 10.0285 11.2028 9.13274 11.2028 8.02775C11.2028 6.92276 10.307 6.027 9.20204 6.027C8.09705 6.027 7.20129 6.92276 7.20129 8.02775C7.20129 9.13274 8.09705 10.0285 9.20204 10.0285Z"
+                  stroke="#83A18D"
+                  stroke-width="2.32"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+            </button>
+          </div>
         </div>
+        <h4 class="pt-4 pb-1 pl-4 font-semibold text-white">
+          Password Length :
+        </h4>
+        <div class="absolute z-10 flex items-center h-4 mt-1 ml-8">
+          <div
+            class="absolute w-3 h-3 transform bg-[#D4D4D4] rounded-full left-1"
+          ></div>
+          <div class="absolute text-base text-[#D4D4D4] -left-4 rang-value">
+            4
+          </div>
+          <input
+            type="range"
+            min="4"
+            max="24"
+            value="4"
+            step="1"
+            class="mx-2 ml-3 w-full h-[2px] outline-none border-none rounded-full range"
+          />
+          <div
+            class="absolute w-3 h-3 transform bg-[#D4D4D4] rounded-full left-[8.5rem]"
+          ></div>
+        </div>
+        <div
+          class="flex items-center justify-between mt-8 ml-4 text-sm text-[#838383] w-72 font-semibold"
+        >
+          <label
+            class="z-30 flex items-center justify-center pointer-events-none option"
+            for="ABC"
+            >ABC<input
+              style="background-image: url(./check.svg)"
+              id="uppercases"
+              class="bg-center bg-no-repeat bg-cover check-box"
+              type="checkbox"
+              checked
+          /></label>
+          <label class="z-30 flex items-center justify-center option" for="abc"
+            >abc
+            <input
+              style="background-image: url(./check.svg)"
+              id="lowercases"
+              class="bg-center bg-no-repeat bg-cover check-box"
+              type="checkbox"
+          /></label>
+          <label class="z-30 flex items-center justify-center option" for="num"
+            >123<input
+              style="background-image: url(./check.svg)"
+              id="numbers"
+              class="bg-center bg-no-repeat bg-cover check-box"
+              type="checkbox"
+          /></label>
+          <label class="z-30 flex items-center justify-center option" for="sym"
+            >@#$<input
+              style="background-image: url(./check.svg)"
+              id="symbols"
+              class="bg-center bg-no-repeat bg-cover check-box"
+              type="checkbox"
+          /></label>
+        </div>
+        <div class="relative flex justify-end bottom-16 -left-11">
+          <button
+            class="w-10 flex items-center justify-center h-10 rounded-full bg-[#52D681] active:animate-spin active:bg-green-700 gen-btn"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="26"
+              height="26"
+              viewBox="0 0 26 26"
+              fill="none"
+            >
+              <path
+                d="M24 13C24 19.072 19.072 24 13 24C6.928 24 3.221 17.884 3.221 17.884M3.221 17.884H8.193M3.221 17.884V23.384M2 13C2 6.928 6.884 2 13 2C20.337 2 24 8.116 24 8.116M24 8.116V2.616M24 8.116H19.116"
+                stroke="white"
+                stroke-opacity="0.8"
+                stroke-width="2.97"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </button>
+        </div>
+      </div>
     </div>
 
-    <footer class="fixed bottom-0 flex justify-center w-full py-2 text-sm text-white">
-        This UI is Made By  <a href="https://github.com/kapil063" target="_blank" class="ml-1 hover:underline hover:text-gray-400"> Kapil Thapa</a>
+    <footer
+      class="fixed bottom-0 flex justify-center w-full py-2 text-sm text-white"
+    >
+      This UI is Made By
+      <a
+        href="https://github.com/kapil063"
+        target="_blank"
+        class="ml-1 hover:underline hover:text-gray-400"
+      >
+        Kapil Thapa</a
+      >
     </footer>
-    <script src="https://kit.fontawesome.com/d2816e204d.js" crossorigin="anonymous"></script>
+    <script
+      src="https://kit.fontawesome.com/d2816e204d.js"
+      crossorigin="anonymous"
+    ></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js"></script>
 
     <script src="./index.js"></script>
-</body>
-
+  </body>
 </html>

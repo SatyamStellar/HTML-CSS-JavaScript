@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Vite App</title>
+    
+  </head>
+  <body class= "flex items-center justify-center w-full md:h-screen bg-zinc-900 ">
+    <div id="app" class="flex flex-col items-center justify-center w-4/5 rounded-lg  bg-zinc-700 xs:mt-36 md:mt-0 md:w-1/2 ">
+      <div class="flex flex-col gap-2 m-2">
+        <h1 class="text-2xl font-bold border-b-2 border-black ">Brute Force Pin Cracker</h1>
+        <label for="inputnumber" class="text-4xl font-bold text-center">Enter Pin</label>
+        <input type="number" name="inputnumber" id="pinval" placeholder="Enter the Pin" class="h-10 rounded-lg bg-zinc-500 text-black border-black border-2 px-2 text-center active:no-underline text-xl font-bold hover:cursor-pointer inputnum">
+        <div class="flex justify-center">
+          <button id="srtBtn" class="text-xl font-semibold bg-zinc-950 w-auto text-zinc-400 px-2 py-4 rounded-xl hover:bg-zinc-900 hover:scale-105 active:bg-black transition ease-in duration-75">Start Brute Force</button>
+        </div>
+      </div>
+      <div class="w-4/5 m-2 border-2 border-black rounded-lg h-28 overflow-hidden" id="combinaitons"></div>
+      <h3 class="text-2xl font-bold text-center bg-black text-zinc-400 py-2 px-4 rounded-lg mb-2">Your Pin: <span id="result"></span></h3>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
