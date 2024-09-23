@@ -110,7 +110,6 @@ document.querySelectorAll(".section").forEach((e) => {
     trigger: e,
     start: "top 50%",
     end: "bottom 50%",
-    markers: true,
     onEnter: () => {
       document.body.setAttribute("theme", e.dataset.col)
     },
