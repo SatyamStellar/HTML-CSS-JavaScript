@@ -3,26 +3,36 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/src/index.css" />
     <title>Obsy</title>
+    <link rel="stylesheet" href="/src/index.css" />
     <script src="/main.js" type="module" defer></script>
   </head>
-  <body class="text-gray-50">
+  <body class="text-gray-50 bg-pribg2">
     <div
-      class="loader w-full h-full fixed z-[999] bg-pribg2 px-[10vw] py-[25vh] leading-none"
+      class="loader pointer-events-none w-full h-full fixed z-[999] bg-pribg2 px-[10vw] py-[25vh] leading-none"
     >
-      <div class="line overflow-hidden bg-purple-400">
-        <h1 class="uppercase text-[7vw] font-Plain2">Your</h1>
+      <div class="line flex justify-start items-center overflow-hidden gap-10">
+        <div
+          class="line1_part1 flex justify-center items-center text-[3vw] -translate-y-3 gap-4 font-Silkserif1"
+        >
+          <h5 class="timer_num w-[4.5vw] text-right">00</h5>
+          <span>-</span>
+          <h5>100</h5>
+        </div>
+        <h1 class="uppercase text-[6.5vw] font-Plain2">Your</h1>
       </div>
-      <div class="line overflow-hidden bg-purple-400">
-        <h1 class="uppercase text-[7vw] font-Plain2">web exprience</h1>
+      <div class="line flex justify-start items-center overflow-hidden">
+        <h1 class="uppercase text-[6.5vw] font-Plain2">web exprience</h1>
       </div>
-      <div class="line overflow-hidden bg-purple-400">
-        <h1 class="uppercase text-[7vw] font-Plain2">is loading right</h1>
+      <div
+        class="line flex justify-start items-center gap-[12px] overflow-hidden"
+      >
+        <h1 class="uppercase text-[6.5vw] font-Plain2">is loading right</h1>
+        <h4 class="now_text uppercase ml-2 text-[6.5vw] font-Plain2">Now</h4>
       </div>
     </div>
     <main class="relative">
-      <section class="w-full h-screen bg-pribg"></section>
+      <section class="w-full h-screen bg-pribg sec1"></section>
       <!-- <section class="w-full h-screen bg-pribg"></section>
       <section class="w-full h-screen bg-pribg"></section> -->
     </main>
