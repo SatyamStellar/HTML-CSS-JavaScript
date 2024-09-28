@@ -60,7 +60,7 @@ function loaderAnimation() {
       opacity: 0,
       duration: .2
     })
-    .from("#hero1 , #hero2, #hero3 , #hero4", {
+    .from("#hero1 , #hero2, #hero3 , #hero4 ", {
       y: 80,
       stagger: 0.2,
       opacity: 0,
@@ -69,7 +69,7 @@ function loaderAnimation() {
 
 function magnateEffect() {
 
-  const buttons = document.querySelectorAll('nav a , .menu-opener__square');
+  const buttons = document.querySelectorAll('nav a, .menu-opener__square ');
 
   buttons.forEach(button => {
     let boundingRect = button.getBoundingClientRect();
@@ -83,11 +83,12 @@ function magnateEffect() {
       const mousePosY = e.clientY - boundingRect.top;
 
       gsap.to(button, {
-        x: (mousePosX - boundingRect.width / 2) * 1,
-        y: (mousePosY - boundingRect.height / 2) * 1,
+        x: (mousePosX - boundingRect.width / 3) * 1,
+        y: (mousePosY - boundingRect.height / 3) * 1,
         duration: 0.8,
         ease: 'power3.out',
       });
+      console.log(mousePosX, mousePosY);
     });
 
     button.addEventListener('mouseleave', () => {
