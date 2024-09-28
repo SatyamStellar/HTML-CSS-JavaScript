@@ -55,37 +55,52 @@ function loaderAnimation() {
     })
     .to(".loader", {
       display: "none"
-    });
+    })
+    .from("nav", {
+      opacity: 0,
+      duration: .2
+    })
+    .from("#hero1 , #hero2, #hero3 , #hero4", {
+      y: 80,
+      stagger: 0.2,
+      opacity: 0,
+    })
 }
 
-const buttons = document.querySelectorAll('nav a');
+function magnateEffect() {
 
-buttons.forEach(button => {
-  let boundingRect = button.getBoundingClientRect();
+  const buttons = document.querySelectorAll('nav a , .menu-opener__square');
 
-  window.addEventListener('resize', () => {
-    boundingRect = button.getBoundingClientRect();
-  });
+  buttons.forEach(button => {
+    let boundingRect = button.getBoundingClientRect();
 
-  button.addEventListener('mousemove', (e) => {
-    const mousePosX = e.clientX - boundingRect.left;
-    const mousePosY = e.clientY - boundingRect.top;
-
-    gsap.to(button, {
-      x: (mousePosX - boundingRect.width / 2) * 1,
-      y: (mousePosY - boundingRect.height / 2) * 1,
-      duration: 0.8,
-      ease: 'power3.out',
+    window.addEventListener('resize', () => {
+      boundingRect = button.getBoundingClientRect();
     });
-  });
 
-  button.addEventListener('mouseleave', () => {
+    button.addEventListener('mousemove', (e) => {
+      const mousePosX = e.clientX - boundingRect.left;
+      const mousePosY = e.clientY - boundingRect.top;
 
-    gsap.to(button, {
-      x: 0,
-      y: 0,
-      duration: 0.8,
-      ease: 'elastic.out(1, 0.3)'
+      gsap.to(button, {
+        x: (mousePosX - boundingRect.width / 2) * 1,
+        y: (mousePosY - boundingRect.height / 2) * 1,
+        duration: 0.8,
+        ease: 'power3.out',
+      });
     });
-  });
-});
+
+    button.addEventListener('mouseleave', () => {
+
+      gsap.to(button, {
+        x: 0,
+        y: 0,
+        duration: 0.8,
+        ease: 'elastic.out(1, 0.3)'
+      });
+    });
+  })
+}
+
+// loaderAnimation();
+magnateEffect();
