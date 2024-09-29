@@ -21,40 +21,48 @@
     ></div>
     <!-- Loader -->
     <div
-      class="loader pointer-events-none hidden w-full h-full fixed z-[999] bg-pribg2 px-[10vw] py-[25vh] leading-none"
+      class="loader pointer-events-none w-full hidden h-full fixed z-[999] bg-pribg2 px-[10vw] py-[25vh] leading-none"
     >
-      <div class="line flex justify-start items-center overflow-hidden gap-10">
+      <div class="relative top-1/4 md:top-0">
         <div
-          class="line1_part1 flex justify-center items-center text-[3vw] -translate-y-3 gap-4 font-Silkserif1"
+          class="line flex justify-start items-center top-1/2 overflow-hidden gap-10"
         >
-          <h5 class="timer_num w-[4.5vw] text-right">00</h5>
-          <span>-</span>
-          <h5>100</h5>
+          <div
+            class="line1_part1 flex justify-center items-center text-lg md:text-[3vw] md:-translate-y-3 gap-4 font-Silkserif1 -translate-y-1"
+          >
+            <h5 class="timer_num w-[4.5vw] text-right">00</h5>
+            <span>-</span>
+            <h5>100</h5>
+          </div>
+          <h1 class="uppercase load_text text-[6.5vw] font-Plain2">
+            <span>Your</span>
+          </h1>
         </div>
-        <h1 class="uppercase load_text text-[6.5vw] font-Plain2">
-          <span>Your</span>
-        </h1>
-      </div>
-      <div class="line flex justify-start items-center overflow-hidden">
-        <h1 class="uppercase load_text text-[6.5vw] font-Plain2">
-          web exprience
-        </h1>
-      </div>
-      <div
-        class="line flex justify-start items-center gap-[12px] overflow-hidden"
-      >
-        <h1 class="uppercase load_text text-[6.5vw] font-Plain2">
-          is <span>loading</span> right
-        </h1>
-        <h4 class="now_text load_text uppercase ml-2 text-[6.5vw] font-Plain2">
-          Now
-        </h4>
+        <div class="line flex justify-start items-center overflow-hidden">
+          <h1 class="uppercase load_text text-[6.5vw] font-Plain2">
+            web exprience
+          </h1>
+        </div>
+        <div
+          class="line flex justify-start items-center gap-[12px] overflow-hidden"
+        >
+          <h1 class="uppercase load_text text-[6.5vw] font-Plain2">
+            is <span>loading</span> right
+          </h1>
+          <h4
+            class="now_text load_text uppercase -ml-1 md:ml-2 text-[6.5vw] font-Plain2"
+          >
+            Now
+          </h4>
+        </div>
       </div>
     </div>
-    <main class="relative">
-      <section class="w-full h-screen bg-pribg sec1">
+    <main class="relative md:mt-0">
+      <section class="w-full h-full pb-10 bg-pribg sec1">
         <nav class="flex justify-between items-center py-[3vw] px-[8vw]">
-          <div class="flex gap-10 items-center">
+          <div
+            class="flex gap-10 w-full justify-between md:justify-start items-center"
+          >
             <svg
               class="menu-opener__square"
               width="12"
@@ -139,7 +147,7 @@
             </svg>
           </div>
           <div
-            class="nav_sec2 flex justify-center items-center font-Plain2 text-sm gap-[2.3vw]"
+            class="nav_sec2 md:flex justify-center items-center hidden font-Plain2 text-sm gap-[2.3vw]"
           >
             <a class="mag_elem p-1" href="#">Work</a>
             <a class="mag_elem p-1" href="#">About</a>
@@ -147,34 +155,34 @@
           </div>
         </nav>
         <div
-          class="hero overflow-y-hidden h-fit ml-[28vw] w-[70%] mt-32"
+          class="hero overflow-y-hidden h-fit md:ml-[28vw] w-[70%] p-0 mt-32"
           id="hero1"
         >
           <h1
-            class="text-[7.7vw] uppercase text-start font-Plain2 leading-[7rem]"
+            class="text-4xl md:text-[7.7vw] uppercase text-start font-Plain2 ml-[5vw] md:ml-0 leading-9 md:leading-[7rem]"
           >
             We Design
           </h1>
         </div>
         <div class="hero overflow-y-hidden h-fit" id="hero2">
           <h1
-            class="text-[7.7vw] uppercase text-start ml-[28vw] w-[70%] leading-[7rem] font-Plain2"
+            class="text-4xl md:text-[7.7vw] uppercase text-start md:ml-[28vw] w-[70%] ml-[5vw] leading-9 md:leading-[7rem] font-Plain2"
           >
             Unique
           </h1>
         </div>
         <div class="hero overflow-y-hidden h-fit" id="hero3">
           <div
-            class="text-[7.7vw] uppercase text-start ml-[28vw] w-[70%] leading-[7rem] font-Plain2 flex gap-4"
+            class="text-4xl md:text-[7.7vw] uppercase text-start md:ml-[28vw] w-[70%] ml-[5vw] leading-9 md:leading-[7rem] font-Plain2 flex gap-4"
           >
             <h2
-              class="text-[7.7vw] uppercase text-start leading-[7rem] font-Plain2 web_text hover:border-none border-b-[7px] border-white transition-all duration-150"
+              class="text-4xl md:text-[7.7vw] uppercase text-start leading-9 md:leading-[7rem] font-Plain2 web_text hover:border-none border-b-[4px] md:border-b-[7px] border-white transition-all duration-150"
             >
               Web
             </h2>
             /
             <h2
-              class="web_text hover:border-none border-b-[7px] border-white transition-all duration-150"
+              class="web_text hover:border-none border-b-[4px] md:border-b-[7px] border-white transition-all duration-150"
             >
               Graphic
             </h2>
@@ -182,19 +190,23 @@
         </div>
         <div class="hero overflow-y-hidden h-fit" id="hero4">
           <h1
-            class="text-[7.7vw] uppercase text-start ml-[28vw] w-[70%] leading-[7rem] font-Plain2"
+            class="text-4xl md:text-[7.7vw] uppercase text-start md:ml-[28vw] w-[70%] ml-[5vw] leading-9 md:leading-[7rem] font-Plain2"
           >
             exprience
           </h1>
         </div>
       </section>
-      <section class="w-full h-screen bg-pribg vid_sec pt-[15vh] relative">
-        <div class="video_container w-[73vw] h-[63vh] relative left-[28%]">
+      <section
+        class="w-full h-auto bg-pribg vid_sec pt-[30%] md:pt-[15vh] relative"
+      >
+        <div
+          class="video_container w-full h-[40%] md:w-[73vw] md:h-[63vh] relative md:left-[28%]"
+        >
           <div
             id="vid_cur"
-            class="w-[10vw] h-[10vw] rounded-full bg-[#ffa63d] z-[999] absolute flex items-center justify-center -top-[10%] right-52"
+            class="md:w-[10vw] md:h-[10vw] flex w-14 h-14 rounded-full bg-[#ffa63d] z-[999] absolute md:flex items-center justify-center right-[45%] top-[40%] md:-top-[10%] md:right-52"
           >
-            <i class="ri-play-fill text-4xl"></i>
+            <i class="ri-play-fill text-xl md:text-4xl"></i>
           </div>
           <img
             class="w-full h-full object-cover absolute"
@@ -212,10 +224,21 @@
       </section>
       <section class="w-full min-h-screen relative bg-zinc-800"></section>
       <section class="w-full min-h-screen bg-pribg pt-[5vh]">
-        <div id="about__contents" class="ml-[28vw] w-[65vw] relative">
-          <h1 class="text-[7.7rem] uppercase tracking-tighter">About Obys</h1>
-          <div class="underline w-full h-[1px] my-[5vw] bg-zinc-200"></div>
-          <p class="w-[60%] text-[2.5vw] leading-[2.5rem] font-Plain1 mb-[4vw]">
+        <div
+          id="about__contents"
+          class="md:ml-[28vw] w-full md:w-[65vw] relative p-7"
+        >
+          <h1
+            class="text-4xl font-semibold md:text-[7.7rem] uppercase tracking-tighter"
+          >
+            About Obys
+          </h1>
+          <div
+            class="underline md:w-full h-[1px] w-full my-[5vw] bg-zinc-200"
+          ></div>
+          <p
+            class="md:w-[60%] text-2xl w-full md:text-[2.5vw] md:leading-[2.5rem] font-Plain1 mb-[4vw]"
+          >
             Our agency is about people who love creating, designing and
             developing wow projects. In the same time we are a boutique agency
             that is more than the collective. We learn and grow, win and
@@ -223,11 +246,11 @@
           </p>
           <div class="about_img_para flex">
             <img
-              class="w-1/2"
+              class="md:w-1/2 w-full h-fit"
               src="https://obys.agency/wp-content/uploads/2020/07/content-image01.jpg"
               alt=""
             />
-            <div>
+            <div class="md:inline-block hidden">
               <p
                 class="ml-10 font-Plain2 text-sm tracking-wide leading-6 w-[55%] mb-5"
               >
@@ -244,7 +267,7 @@
             </div>
           </div>
           <div
-            class="about-marquee__container w-1/2 py-[3.8vw] px-[4vw] relative -mt-[28vh] ml-[22vw] bg-[#3f7df4]"
+            class="about-marquee__container w-full md:w-1/2 py-[3.8vw] px-[4vw] relative md:-mt-[28vh] md:ml-[22vw] bg-[#3f7df4]"
           >
             <div
               class="flex justify-between items-start py-[2.5vw] border-b border-white"
@@ -283,6 +306,10 @@
               </p>
             </div>
           </div>
+          <div
+            class="underline w-full h-[1px] mt-16 md:mt-[10%] bg-zinc-200"
+          ></div>
+          <p class="text-sm mt-5 md:mt-10 font-Plain2">We Work With</p>
         </div>
       </section>
     </main>

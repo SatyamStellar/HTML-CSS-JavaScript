@@ -47,14 +47,14 @@ function loaderAnimation() {
       duration: .4,
       delay: 3
     })
-    .from(".sec1", {
+    .to(".loader", {
+      display: "none"
+    })
+    .from("main", {
       y: 1600,
       opacity: 0,
       ease: "power4",
       duration: 1
-    })
-    .to(".loader", {
-      display: "none"
     })
     .from("nav", {
       opacity: 0,
