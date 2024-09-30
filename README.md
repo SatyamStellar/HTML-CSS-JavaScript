@@ -1,4 +1,4 @@
-# My HTML - CSS - JavaScript
+# HTML - CSS - JavaScript
 
 Welcome to my **Projects Repository**! 🎉 This repository showcases all of my personal and professional projects, categorized into two main sections: **Major Projects** and **Minor Projects**. Each directory contains multiple projects that reflect my work and growth as a developer.
 
