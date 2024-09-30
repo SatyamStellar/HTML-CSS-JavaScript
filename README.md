@@ -36,7 +36,7 @@ Each project has its own directory containing the relevant code and files.
    cd your-repo-name
 
 
-   ## License
+## License
 
 MIT License
 
