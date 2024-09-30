@@ -22,10 +22,9 @@ This repository is divided into two main categories:
 ## Directory Structure
 
 The repository has the following structure:
-/major-projects/ ├── <major-project-1>/ ├── <major-project-2>/ └── <major-project-n>/
 
-/minor-projects/ ├── <minor-project-1>/ ├── <minor-project-2>/ └── <minor-project-n>/
-
+There are mainly 2 Directories "Major Projects" & "Minor Projects"
+In each directory they have their separate files and directorys respectively  
 
 Each project has its own directory containing the relevant code and files.
 
