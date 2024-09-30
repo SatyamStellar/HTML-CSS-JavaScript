@@ -1,5 +1,21 @@
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Lenis from "lenis";
+
+const lenis = new Lenis({
+  duration: 2
+}
+)
+
+lenis.on("sce1", (e) => {
+  console.log(e);
+})
+function raf(time) {
+  lenis.raf(time)
+  requestAnimationFrame(raf)
+}
+
+raf()
 
 document.addEventListener("mousemove", (dets) => {
   gsap.to(".cursor", {
