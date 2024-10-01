@@ -17,7 +17,7 @@ const render = () => {
             </div>
             <div class="flex gap-4 mr-4 mt-5 md:mt-0">
               <div class="flex items-center me-4">
-    <input id="custom-checkbox" type="checkbox" class="check__box__in w-8 h-8 bg-red-500 rounded-full appearance-none checked:bg-green-500 focus:outline-none focus:ring-2 focus:ring-green-500 flex justify-center items-center bg-[url('/src/check-line.svg')] bg-[length:20px_20px] bg-no-repeat bg-center" ${todos.completed ? "checked" : ""}>
+    <input id="custom-checkbox" type="checkbox" class="check__box__in w-8 h-8 bg-red-500 rounded-full appearance-none checked:bg-green-500 focus:outline-none focus:ring-2 focus:ring-green-500 flex justify-center items-center bg-[url('/src/check.svg)] bg-cover  bg-no-repeat bg-center" ${todos.completed ? "checked" : ""}>
 
 </div>
 
