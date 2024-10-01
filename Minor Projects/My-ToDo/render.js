@@ -5,7 +5,7 @@ const render = () => {
 
   const todoelems = store.todos.map((todos) => `<div class="mt-8 p-4 px-8 rounded-md flex flex-col md:flex-row justify-between items-center bg-zinc-800 todo__name" data-id=${todos.id}>
             <div class="w-[80%]">
-              <h2 class="text-3xl text-yellow-500 font-medium ${todos.complete ? "completed" : ""}" id="todo__name">
+              <h2 class="text-3xl text-yellow-500 font-medium ${todos.completed ? "completed" : ""}" id="todo__name">
                 ${todos.name}
               </h2>
               <p
@@ -17,8 +17,8 @@ const render = () => {
             </div>
             <div class="flex gap-4 mr-4 mt-5 md:mt-0">
               <div class="flex items-center me-4">
-    <input id="custom-checkbox" type="checkbox" class="check__box__in w-8 h-8 bg-red-500 rounded-full appearance-none checked:bg-green-500 focus:outline-none focus:ring-2 focus:ring-green-500">
-    <label for="custom-checkbox" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300"></label>
+    <input id="custom-checkbox" type="checkbox" class="check__box__in w-8 h-8 bg-red-500 rounded-full appearance-none checked:bg-green-500 focus:outline-none focus:ring-2 focus:ring-green-500 flex justify-center items-center bg-[url('/src/check-line.svg')] bg-[length:20px_20px] bg-no-repeat bg-center" ${todos.completed ? "checked" : ""}>
+
 </div>
 
 
@@ -33,4 +33,4 @@ const render = () => {
 }
 
 
-export default render;;
+export default render;

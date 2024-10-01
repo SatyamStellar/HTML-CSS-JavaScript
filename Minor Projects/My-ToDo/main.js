@@ -1,9 +1,19 @@
 import render from "./render";
-import { addTodo, delTodo } from "./store";
+import store from "./store"
+import { addTodo, delTodo, toggleCompleted } from "./store";
 
 window.addEventListener("todoschange", () => {
   render();
 })
+
+const localStorageItems = JSON.parse(localStorage.getItem("store"))
+if (localStorageItems?.todos.length > 0) {
+  store.todos = localStorageItems.todos
+} else {
+  localStorage.setItem("store", JSON.stringify(store))
+
+  render();
+}
 
 const form = document.querySelector("form");
 const newName = form.querySelector("#new-todo__name")
@@ -20,9 +30,9 @@ form.addEventListener('submit', (e) => {
       id: crypto.randomUUID(),
       name: todoName,
       dec: todoDec,
-      complete: false
+      completed: false
     }
-    console.log(newTodo);
+
     addTodo(newTodo);
   }
 })
@@ -34,7 +44,7 @@ todo.addEventListener('click', (e) => {
   if (target.classList.contains("rem__btn")) {
 
     const id = target.closest(".todo__name").dataset.id
-    console.log(id);
+
 
     delTodo(id);
   }
@@ -45,7 +55,10 @@ todo.addEventListener('click', (e) => {
 todo.addEventListener("click", (e) => {
   const target = e.target
   if (target.classList.contains("check__box__in")) {
-    const id = target.closest(".todo__name").dataset.id
-    console.log(id);
+    const id = target.closest(".todo__name").dataset.id;
+    const completed = target.checked;
+
+    toggleCompleted(id, completed);
+
   }
 })

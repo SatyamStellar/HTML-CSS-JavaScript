@@ -4,13 +4,13 @@ const store = {
       id: "1",
       name: 'Task 1',
       dec: 'There is noting to do a task',
-      complete: false
+      completed: false
     },
     {
       id: "2",
       name: 'Task 2',
       dec: 'This is a to-do task',
-      complete: true
+      completed: true
     }
   ]
 };
@@ -24,6 +24,7 @@ const storeHandler = {
     if (property == "todos") {
       window.dispatchEvent(new Event("todoschange"))
     }
+    localStorage.setItem("store", JSON.stringify(store))
     return true;
   }
 }
@@ -39,5 +40,15 @@ function delTodo(id) {
     !== id);
 }
 
-export { addTodo, delTodo };
+function toggleCompleted(id, completed) {
+  storeProxy.todos = storeProxy.todos.map((todo) => {
+    if (todo.id === id) {
+      return { ...todo, completed };
+    } else {
+      return todo;
+    }
+  });
+}
+
+export { addTodo, delTodo, toggleCompleted };
 export default storeProxy;
