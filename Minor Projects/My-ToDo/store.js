@@ -1,17 +1,5 @@
 const store = {
   todos: [
-    {
-      id: "1",
-      name: 'Task 1',
-      dec: 'There is noting to do a task',
-      completed: false
-    },
-    {
-      id: "2",
-      name: 'Task 2',
-      dec: 'This is a to-do task',
-      completed: true
-    }
   ]
 };
 
