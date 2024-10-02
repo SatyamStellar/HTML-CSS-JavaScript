@@ -32,9 +32,11 @@ form.addEventListener('submit', (e) => {
       dec: todoDec,
       completed: false
     }
-
     addTodo(newTodo);
   }
+  newName.value = '';
+  newDec.value = '';
+
 })
 
 const todo = document.querySelector('._todo')
