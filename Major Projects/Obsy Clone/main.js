@@ -1,21 +1,47 @@
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Lenis from "lenis";
 
-const lenis = new Lenis({
-  duration: 2
+Shery.imageEffect(".img__div", {
+  style: 5,
+  debug: true,
+  gooey: true,
+});
+
+
+
+
+function locomotiveAnimation() {
+  gsap.registerPlugin(ScrollTrigger);
+
+  const locoScroll = new LocomotiveScroll({
+    el: document.querySelector(".main"),
+    smooth: true
+  });
+
+  locoScroll.on("scroll", ScrollTrigger.update);
+
+
+  ScrollTrigger.scrollerProxy(".main", {
+    scrollTop(value) {
+      return arguments.length ? locoScroll.scrollTo(value, 0, 0) : locoScroll.scroll.instance.scroll.y;
+    },
+    getBoundingClientRect() {
+      return { top: 0, left: 0, width: window.innerWidth, height: window.innerHeight };
+    },
+
+    pinType: document.querySelector(".main").style.transform ? "transform" : "fixed"
+  });
+
+
+
+
+  // each time the window updates, we should refresh ScrollTrigger and then update LocomotiveScroll. 
+  ScrollTrigger.addEventListener("refresh", () => locoScroll.update());
+
+  // after everything is set up, refresh() ScrollTrigger and update LocomotiveScroll because padding may have been added for pinning, etc.
+  ScrollTrigger.refresh();
+
 }
-)
 
-lenis.on("sce1", (e) => {
-  console.log(e);
-})
-function raf(time) {
-  lenis.raf(time)
-  requestAnimationFrame(raf)
-}
 
-raf()
 
 document.addEventListener("mousemove", (dets) => {
   gsap.to(".cursor", {
@@ -83,6 +109,8 @@ function loaderAnimation() {
     })
 }
 
+
+
 function magnateEffect() {
 
   const buttons = document.querySelectorAll('nav a, .menu-opener__square ');
@@ -119,5 +147,12 @@ function magnateEffect() {
   })
 }
 
+
+
 // loaderAnimation();
+locomotiveAnimation();
 magnateEffect();
+
+
+
+

@@ -9,15 +9,20 @@
       href="/src/assets/images/favicon-32x32.png"
       type="image/x-icon"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/0x72/shery@latest/dist/shery.css"
+    />
+    <link rel="stylesheet" href="/src/loco.css" />
     <link rel="stylesheet" href="/src/index.css" />
     <link rel="stylesheet" href="css/remixicon.css" />
-    <script src="/main.js" type="module" defer></script>
+    <script src="/main.js" type="module"></script>
   </head>
 
-  <body class="text-gray-50 bg-pribg2">
+  <body class="text-gray-50 bg-pribg">
     <!-- Cursor -->
     <div
-      class="w-10 cursor fixed z-[9999] h-10 rounded-full border-[1.25px] border-gray-50 mix-blend-difference -translate-x-[50%] -translate-y-[50%]"
+      class="w-10 cursor fixed hidden z-[9999] h-10 rounded-full border-[1.25px] border-gray-50 mix-blend-difference -translate-x-[50%] -translate-y-[50%]"
     ></div>
     <!-- Loader -->
     <div
@@ -57,8 +62,12 @@
         </div>
       </div>
     </div>
-    <main class="relative md:mt-0" data-scroll>
-      <section class="w-full h-full pb-10 bg-pribg sec1">
+    <main class="relative md:mt-0 main">
+      <section
+        class="w-full h-full pb-10 bg-pribg sec1"
+        data-scroll
+        data-scroll-speed="2"
+      >
         <nav class="flex justify-between items-center py-[3vw] px-[8vw]">
           <div
             class="flex gap-10 w-full justify-between md:justify-start items-center"
@@ -194,7 +203,8 @@
         </div>
       </section>
       <section
-        class="w-full h-auto bg-pribg vid_sec pt-[30%] md:pt-[15vh] relative overflow-x-hidden sec2"
+        class="w-full h-auto bg-pribg vid_sec pt-[30%] md:pt-[7vh] relative overflow-x-hidden sec2"
+        data-scroll
       >
         <div
           class="video_container w-full h-[40%] md:w-[73vw] md:h-[63vh] relative md:left-[28%]"
@@ -212,18 +222,40 @@
           />
           <video
             class="w-full h-full object-cover"
-            autoplay
             loop
             muted
             src="https://obys.agency/wp-content/uploads/2022/11/Obys-Showreel-2022.mp4"
           ></video>
         </div>
       </section>
-      <section class="w-full min-h-screen relative bg-zinc-800"></section>
-      <section class="w-full min-h-screen bg-pribg pt-[5vh]">
+      <section class="w-full min-h-screen mt-10">
+        <div class="md:ml-[28vw] w-full md:w-[65vw] relative p-7">
+          <h1
+            class="text-4xl font-semibold md:text-[7.7rem] uppercase tracking-tighter relative about__obys__text"
+          >
+            our projects
+          </h1>
+          <div
+            class="underline w-full h-[1px] mt-16 md:mt-[10%] bg-zinc-200"
+          ></div>
+        </div>
+        <div class="img-div-cont">
+          <div class="img__div">
+            <img
+              src="https://images.unsplash.com/photo-1726730715834-85a0fff7d0ba?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHw3fHx8ZW58MHx8fHx8"
+              alt=""
+            />
+            <img
+              src="https://images.unsplash.com/photo-1727799777485-4939c90326ad?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxmZWF0dXJlZC1waG90b3MtZmVlZHwxOHx8fGVufDB8fHx8fA%3D%3D"
+              alt=""
+            />
+          </div>
+        </div>
+      </section>
+      <section class="w-full min-h-screen bg-pribg pt-[5vh]" data-scroll>
         <div
           id="about__contents"
-          class="md:ml-[28vw] w-full md:w-[65vw] relative p-7"
+          class="md:ml-[28vw] w-full md:w-[65vw] relative pt-16 p-7"
         >
           <h1
             class="text-4xl font-semibold md:text-[7.7rem] uppercase tracking-tighter relative about__obys__text"
@@ -310,6 +342,7 @@
         </div>
       </section>
       <section
+        data-scroll
         class="w-full bg-pribg md:h-screen pt-10 relative pointer-events-none pb-10"
       >
         <div
@@ -359,7 +392,7 @@
           </h2>
         </div>
       </section>
-      <footer class="bg-pribg w-full min-h-screen pt-10">
+      <footer class="bg-pribg w-full min-h-screen pt-10" data-scroll>
         <div class="md:ml-[28vw] w-full px-5 md:px-0 md:w-[65vw]">
           <h1
             class="text-4xl relative font-Plain2 md:text-[7rem] uppercase tracking-tighter flex gap-5 lets__create_text"
@@ -412,5 +445,21 @@
         </div>
       </footer>
     </main>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+    <script
+      type="text/javascript"
+      src="https://unpkg.com/sheryjs/dist/Shery.js"
+    ></script>
+    <!-- Recommended -->
   </body>
 </html>
