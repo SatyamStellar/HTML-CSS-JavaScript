@@ -98,7 +98,6 @@ function paraPageAnimation() {
 }
 
 function loco() {
-
   (function () {
     const locomotiveScroll = new LocomotiveScroll();
   })();
