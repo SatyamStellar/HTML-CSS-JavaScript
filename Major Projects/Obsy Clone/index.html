@@ -6,8 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Obsy</title>
   <link rel="shortcut icon" href="/src/assets/images/favicon-32x32.png" type="image/x-icon" />
-  <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
-
+  <link rel="stylesheet" href="/src/shery.css">
   <link rel="stylesheet" href="/src/loco.css" />
   <link rel="stylesheet" href="/src/index.css" />
   <link rel="stylesheet" href="css/remixicon.css" />
@@ -47,7 +46,7 @@
     </div>
   </div>
   <main class="relative md:mt-0 main">
-    <section class="w-full h-full pb-10 bg-pribg sec1 " data-scroll data-scroll-speed="2">
+    <section class="w-full h-full relative pb-10 bg-pribg sec1 " data-scroll data-scroll-speed="2">
       <nav class="flex justify-between items-center py-[3vw] px-[8vw]">
         <div class="flex gap-10 w-full justify-between md:justify-start items-center">
           <svg class="menu-opener__square" width="12" height="12" viewBox="0 0 12 12" fill="none">
@@ -115,7 +114,7 @@
       </div>
       <div class="hero overflow-y-hidden h-fit" id="hero3">
         <div
-          class="text-4xl md:text-[7.7vw] uppercase text-start md:ml-[28vw] w-[70%] ml-[5vw] leading-9 md:leading-[7rem] font-Plain2 flex gap-4">
+          class="text-4xl md:text-[7.7vw] uppercase text-start md:ml-[28vw] w-[70%] ml-[5vw] leading-9 md:leading-[7rem] font-Plain2 flex gap-4 z-[99] relative flag_text">
           <h2
             class="text-4xl md:text-[7.7vw] uppercase text-start leading-9 md:leading-[7rem] font-Plain2 web_text hover:border-none border-b-[4px] md:border-b-[7px] border-white transition-all duration-150">
             Web
@@ -132,18 +131,20 @@
           class="text-4xl md:text-[7.7vw] uppercase text-start md:ml-[28vw] w-[70%] ml-[5vw] leading-9 md:leading-[7rem] font-Plain2">
           exprience
         </h1>
+        <img
+        id="flag"
+        class="w-64 absolute h-auto opacity-0 top-0 left-0 -translate-x-[50%] -translate-y-[50%]"
+         src="/src/assets/images/Flag.jpg" alt="">
       </div>
     </section>
-    <section class="w-full h-auto bg-pribg vid_sec pt-[30%] md:pt-[7vh] relative overflow-x-hidden sec2 "
+    <section class="w-full overfl bg-pribg vid_sec pt-[30%] md:pt-[7vh]  overflow-x-hidden sec2 "
       data-scroll>
-      <div class="video_container w-full h-[40%] md:w-[73vw] md:h-[63vh] relative md:left-[28%]">
+      <div class="video_container w-full h-[40%] md:w-[73vw] md:h-[63vh] relative md:left-[28%] bg-bcimg1 bg-cover bg-opacity-100 ">
         <div id="vid_cur"
-          class="md:w-[10vw] md:h-[10vw] flex w-14 h-14 rounded-full bg-[#ffa63d] z-[999] absolute md:flex items-center justify-center right-[45%] top-[40%] md:-top-[10%] md:right-52">
+          class="md:w-[10vw] md:h-[10vw] flex w-14 h-fit rounded-full bg-[#ffa63d] z-[999] absolute md:flex items-center justify-center right-[45%] top-[40%] md:-top-[10%] md:right-52">
           <i class="ri-play-fill text-xl md:text-4xl"></i>
         </div>
-        <img class="w-full h-full object-cover absolute"
-          src="https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg" alt="" />
-        <video class="w-full h-full object-cover" loop muted
+        <video class="w-full h-full object-cover opacity-0" loop 
           src="https://obys.agency/wp-content/uploads/2022/11/Obys-Showreel-2022.mp4"></video>
       </div>
     </section>

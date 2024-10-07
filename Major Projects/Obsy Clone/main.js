@@ -91,16 +91,40 @@ function locomotiveAnimation() {
 
 }
 
-
 function cursorAnimation() {
   Shery.mouseFollower({
     skew: true,
     ease: "cubic-bezier(0.23, 1, 0.320, 1)",
     duration: 1
-  })
+  });
 }
 
+function videoPlay() {
+  let clicked = 0;
 
+  let video = document.querySelector("video")
+  document.querySelector(".video_container").addEventListener("click", () => {
+    if (clicked == 0) {
+      video.play();
+
+      document.querySelector("#vid_cur").innerHTML = `<i class="ri-pause-large-line text-xl md:text-4xl"></i>`
+
+      gsap.to(video, {
+        opacity: 1
+      })
+      clicked = 1
+    } else {
+      video.pause();
+
+      document.querySelector("#vid_cur").innerHTML = `<i class="ri-play-fill text-xl md:text-4xl"></i>`
+
+      gsap.to(video, {
+        opacity: 0
+      })
+      clicked = 0
+    }
+  })
+}
 
 function magnateEffect() {
 
@@ -148,8 +172,31 @@ function sheryAnimation() {
 }
 
 
+function flagMove() {
+  document.addEventListener("mousemove", (dets) => {
+    gsap.to("#flag", {
+      x: dets.x,
+      y: dets.y,
+    })
+  })
+
+  document.querySelector(".flag_text").addEventListener("mouseenter", (dets) => {
+    gsap.to("#flag", {
+      x: dets.x,
+      y: dets.y,
+      opacity: 1
+    })
+  })
+  document.querySelector(".flag_text").addEventListener("mouseleave", () => {
+    gsap.to("#flag", {
+      opacity: 0
+    })
+  })
+}
 // loaderAnimation();
 locomotiveAnimation();
 magnateEffect();
 sheryAnimation();
 cursorAnimation();
+videoPlay();
+flagMove();
