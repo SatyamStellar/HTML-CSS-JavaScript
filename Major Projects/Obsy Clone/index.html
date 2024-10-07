@@ -1,539 +1,453 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Obsy</title>
-    <link
-      rel="shortcut icon"
-      href="/src/assets/images/favicon-32x32.png"
-      type="image/x-icon"
-    />
-    <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
 
-    <link rel="stylesheet" href="/src/loco.css" />
-    <link rel="stylesheet" href="/src/index.css" />
-    <link rel="stylesheet" href="css/remixicon.css" />
-    <script src="/main.js" type="module"></script>
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Obsy</title>
+  <link rel="shortcut icon" href="/src/assets/images/favicon-32x32.png" type="image/x-icon" />
+  <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" />
 
-  <body class="text-gray-50 bg-pribg">
-    <!-- Cursor -->
-    <div
-      class="w-10 cursor fixed hidden z-[9999] h-10 rounded-full border-[1.25px] border-gray-50 mix-blend-difference -translate-x-[50%] -translate-y-[50%]"
-    ></div>
-    <!-- Loader -->
-    <div
-      class="loader pointer-events-none hidden w-full h-full fixed z-[999] bg-pribg2 px-[10vw] py-[25vh] leading-none"
-    >
-      <div class="relative top-1/4 md:top-0">
+  <link rel="stylesheet" href="/src/loco.css" />
+  <link rel="stylesheet" href="/src/index.css" />
+  <link rel="stylesheet" href="css/remixicon.css" />
+  <script src="/main.js" type="module"></script>
+</head>
+
+<body class="text-gray-50 bg-pribg">
+  <!-- Cursor -->
+
+  <!-- Loader -->
+  <div class="loader pointer-events-none hidden w-full h-full fixed z-[999] bg-pribg2 px-[10vw] py-[25vh] leading-none">
+    <div class="relative top-1/4 md:top-0">
+      <div class="line flex justify-start items-center top-1/2 overflow-hidden gap-10">
         <div
-          class="line flex justify-start items-center top-1/2 overflow-hidden gap-10"
-        >
-          <div
-            class="line1_part1 flex justify-center items-center text-lg md:text-[3vw] md:-translate-y-3 gap-4 font-Silkserif1 -translate-y-1"
-          >
-            <h5 class="timer_num w-[4.5vw] text-right">00</h5>
-            <span>-</span>
-            <h5>100</h5>
-          </div>
-          <h1 class="uppercase load_text text-[6.5vw] font-Plain2">
-            <span>Your</span>
-          </h1>
+          class="line1_part1 flex justify-center items-center text-lg md:text-[3vw] md:-translate-y-3 gap-4 font-Silkserif1 -translate-y-1">
+          <h5 class="timer_num w-[4.5vw] text-right">00</h5>
+          <span>-</span>
+          <h5>100</h5>
         </div>
-        <div class="line flex justify-start items-center overflow-hidden">
-          <h1 class="uppercase load_text text-[6.5vw] font-Plain2">
-            web exprience
-          </h1>
-        </div>
-        <div
-          class="line flex justify-start items-center gap-[12px] overflow-hidden"
-        >
-          <h1 class="uppercase load_text text-[6.5vw] font-Plain2">
-            is <span>loading</span> right
-          </h1>
-          <h4
-            class="now_text load_text uppercase -ml-1 md:ml-2 text-[6.5vw] font-Plain2"
-          >
-            Now
-          </h4>
-        </div>
+        <h1 class="uppercase load_text text-[6.5vw] font-Plain2">
+          <span>Your</span>
+        </h1>
+      </div>
+      <div class="line flex justify-start items-center overflow-hidden">
+        <h1 class="uppercase load_text text-[6.5vw] font-Plain2">
+          web exprience
+        </h1>
+      </div>
+      <div class="line flex justify-start items-center gap-[12px] overflow-hidden">
+        <h1 class="uppercase load_text text-[6.5vw] font-Plain2">
+          is <span>loading</span> right
+        </h1>
+        <h4 class="now_text load_text uppercase -ml-1 md:ml-2 text-[6.5vw] font-Plain2">
+          Now
+        </h4>
       </div>
     </div>
-    <main class="relative md:mt-0 main">
-      <section
-        class="w-full h-full pb-10 bg-pribg sec1 hidden"
-        data-scroll
-        data-scroll-speed="2"
-      >
-        <nav class="flex justify-between items-center py-[3vw] px-[8vw]">
-          <div
-            class="flex gap-10 w-full justify-between md:justify-start items-center"
-          >
-            <svg
-              class="menu-opener__square"
-              width="12"
-              height="12"
-              viewBox="0 0 12 12"
-              fill="none"
-            >
-              <rect y="10" width="2" height="2" fill="currentColor"></rect>
-              <rect y="5" width="2" height="2" fill="currentColor"></rect>
-              <rect width="2" height="2" fill="currentColor"></rect>
-              <rect
-                x="5"
-                y="10"
-                width="2"
-                height="2"
-                fill="currentColor"
-              ></rect>
-              <rect x="5" y="5" width="2" height="2" fill="currentColor"></rect>
-              <rect x="5" width="2" height="2" fill="currentColor"></rect>
-              <rect
-                x="10"
-                y="10"
-                width="2"
-                height="2"
-                fill="currentColor"
-              ></rect>
-              <rect
-                x="10"
-                y="5"
-                width="2"
-                height="2"
-                fill="currentColor"
-              ></rect>
-              <rect x="10" width="2" height="2" fill="currentColor"></rect>
-            </svg>
-            <svg
-              class="brand__svg hover:opacity-60 transition-all duration-150"
-              width="71"
-              height="27"
-              viewBox="0 0 71 27"
-            >
-              <path
-                d="M40.7622 24.5917C40.7622 23.6724 41.4511 22.9829 42.3697 22.9829C43.2883 22.9829 43.9773 23.6724 43.9773 24.5917C43.9773 25.511 43.2883 26.2005 42.3697 26.2005C41.566 26.2005 40.7622 25.3961 40.7622 24.5917Z"
-                fill="currentColor"
-              ></path>
-              <path
-                d="M65.7937 8.96329C65.7937 8.04398 66.4826 7.35449 67.4012 7.35449C68.3198 7.35449 69.0087 8.04398 69.0087 8.96329C69.0087 9.88261 68.3198 10.5721 67.4012 10.5721C66.4826 10.5721 65.7937 9.88261 65.7937 8.96329Z"
-                fill="currentColor"
-              ></path>
-              <path
-                d="M59.019 18.3861C59.019 17.4668 59.708 16.7773 60.6266 16.7773C61.5451 16.7773 62.2341 17.4668 62.2341 18.3861C62.2341 19.3055 61.5451 19.9949 60.6266 19.9949C59.8228 19.9949 59.019 19.3055 59.019 18.3861Z"
-                fill="currentColor"
-              ></path>
-              <path
-                d="M41.3365 9.88276C40.5327 8.27396 39.6142 7.8143 39.04 7.58447H46.3887C45.9294 7.8143 45.0108 8.04413 45.0108 8.96344C45.0108 9.19327 45.1257 9.65293 45.3553 10.1126L48.3407 16.6627L46.5035 20.225L41.3365 9.88276Z"
-                fill="currentColor"
-              ></path>
-              <path
-                d="M51.8998 9.30819C51.8998 8.04413 50.9812 7.69939 50.2922 7.58447H54.6555C53.8517 7.8143 52.8183 8.27396 51.7849 10.1126C51.8998 9.88276 51.8998 9.65293 51.8998 9.30819Z"
-                fill="currentColor"
-              ></path>
-              <path
-                d="M66.7122 17.9266C66.7122 16.2029 65.2195 15.6283 63.0378 14.5941C60.8562 13.5599 59.019 12.7555 59.019 10.8019C59.019 8.73348 60.971 7.12468 64.1861 7.00977C63.1527 7.23959 62.3489 8.15891 62.3489 9.42296C62.3489 10.9168 63.612 11.4914 65.9084 12.5256C68.2049 13.5599 70.2717 14.4792 70.2717 16.6626C70.2717 19.1907 67.4011 20.3398 64.6454 20.4547C65.9084 20.2249 66.7122 19.1907 66.7122 17.9266Z"
-                fill="currentColor"
-              ></path>
-              <path
-                d="M21.0129 2.64303C21.0129 1.6088 20.3239 0.919313 19.2905 0.689485L24.4576 0V20.3398C24.4576 20.3398 22.6204 20.4547 20.8981 21.8337V2.64303H21.0129Z"
-                fill="currentColor"
-              ></path>
-              <path
-                d="M34.6764 14.0195C34.6764 10.4572 31.691 7.58432 27.9019 7.35449C30.1983 7.69923 30.8873 11.4914 30.8873 14.0195C30.8873 16.5476 30.1983 20.2249 27.9019 20.6845C31.8058 20.4547 34.6764 17.5819 34.6764 14.0195Z"
-                fill="currentColor"
-              ></path>
-              <path
-                d="M14.9269 14.0195C14.9269 10.4572 11.9415 7.58432 8.15234 7.35449C10.4488 7.69923 11.1377 11.4914 11.1377 14.0195C11.1377 16.5476 10.4488 20.2249 8.15234 20.6845C11.9415 20.4547 14.9269 17.5819 14.9269 14.0195Z"
-                fill="currentColor"
-              ></path>
-              <path
-                d="M0 14.0195C0 10.4572 2.9854 7.58432 6.77456 7.35449C4.4781 7.69923 3.78916 11.4914 3.78916 14.0195C3.78916 16.5476 4.4781 20.2249 6.77456 20.6845C2.9854 20.4547 0 17.5819 0 14.0195Z"
-                fill="currentColor"
-              ></path>
-            </svg>
-          </div>
-          <div
-            class="nav_sec2 md:flex justify-center items-center hidden font-Plain2 text-sm gap-[2.3vw]"
-          >
-            <a class="mag_elem p-1" href="#">Work</a>
-            <a class="mag_elem p-1" href="#">About</a>
-            <a class="mag_elem p-1" href="#">Contact</a>
-          </div>
-        </nav>
-        <div class="hero h-fit md:ml-[28vw] w-[70%] p-0 mt-32" id="hero1">
-          <h1
-            class="text-4xl md:text-[7.7vw] uppercase text-start font-Plain2 ml-[5vw] md:ml-0 leading-9 md:leading-[7rem] relative we__design__text"
-          >
-            We Design
-          </h1>
+  </div>
+  <main class="relative md:mt-0 main">
+    <section class="w-full h-full pb-10 bg-pribg sec1 " data-scroll data-scroll-speed="2">
+      <nav class="flex justify-between items-center py-[3vw] px-[8vw]">
+        <div class="flex gap-10 w-full justify-between md:justify-start items-center">
+          <svg class="menu-opener__square" width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <rect y="10" width="2" height="2" fill="currentColor"></rect>
+            <rect y="5" width="2" height="2" fill="currentColor"></rect>
+            <rect width="2" height="2" fill="currentColor"></rect>
+            <rect x="5" y="10" width="2" height="2" fill="currentColor"></rect>
+            <rect x="5" y="5" width="2" height="2" fill="currentColor"></rect>
+            <rect x="5" width="2" height="2" fill="currentColor"></rect>
+            <rect x="10" y="10" width="2" height="2" fill="currentColor"></rect>
+            <rect x="10" y="5" width="2" height="2" fill="currentColor"></rect>
+            <rect x="10" width="2" height="2" fill="currentColor"></rect>
+          </svg>
+          <svg class="brand__svg hover:opacity-60 transition-all duration-150" width="71" height="27"
+            viewBox="0 0 71 27">
+            <path
+              d="M40.7622 24.5917C40.7622 23.6724 41.4511 22.9829 42.3697 22.9829C43.2883 22.9829 43.9773 23.6724 43.9773 24.5917C43.9773 25.511 43.2883 26.2005 42.3697 26.2005C41.566 26.2005 40.7622 25.3961 40.7622 24.5917Z"
+              fill="currentColor"></path>
+            <path
+              d="M65.7937 8.96329C65.7937 8.04398 66.4826 7.35449 67.4012 7.35449C68.3198 7.35449 69.0087 8.04398 69.0087 8.96329C69.0087 9.88261 68.3198 10.5721 67.4012 10.5721C66.4826 10.5721 65.7937 9.88261 65.7937 8.96329Z"
+              fill="currentColor"></path>
+            <path
+              d="M59.019 18.3861C59.019 17.4668 59.708 16.7773 60.6266 16.7773C61.5451 16.7773 62.2341 17.4668 62.2341 18.3861C62.2341 19.3055 61.5451 19.9949 60.6266 19.9949C59.8228 19.9949 59.019 19.3055 59.019 18.3861Z"
+              fill="currentColor"></path>
+            <path
+              d="M41.3365 9.88276C40.5327 8.27396 39.6142 7.8143 39.04 7.58447H46.3887C45.9294 7.8143 45.0108 8.04413 45.0108 8.96344C45.0108 9.19327 45.1257 9.65293 45.3553 10.1126L48.3407 16.6627L46.5035 20.225L41.3365 9.88276Z"
+              fill="currentColor"></path>
+            <path
+              d="M51.8998 9.30819C51.8998 8.04413 50.9812 7.69939 50.2922 7.58447H54.6555C53.8517 7.8143 52.8183 8.27396 51.7849 10.1126C51.8998 9.88276 51.8998 9.65293 51.8998 9.30819Z"
+              fill="currentColor"></path>
+            <path
+              d="M66.7122 17.9266C66.7122 16.2029 65.2195 15.6283 63.0378 14.5941C60.8562 13.5599 59.019 12.7555 59.019 10.8019C59.019 8.73348 60.971 7.12468 64.1861 7.00977C63.1527 7.23959 62.3489 8.15891 62.3489 9.42296C62.3489 10.9168 63.612 11.4914 65.9084 12.5256C68.2049 13.5599 70.2717 14.4792 70.2717 16.6626C70.2717 19.1907 67.4011 20.3398 64.6454 20.4547C65.9084 20.2249 66.7122 19.1907 66.7122 17.9266Z"
+              fill="currentColor"></path>
+            <path
+              d="M21.0129 2.64303C21.0129 1.6088 20.3239 0.919313 19.2905 0.689485L24.4576 0V20.3398C24.4576 20.3398 22.6204 20.4547 20.8981 21.8337V2.64303H21.0129Z"
+              fill="currentColor"></path>
+            <path
+              d="M34.6764 14.0195C34.6764 10.4572 31.691 7.58432 27.9019 7.35449C30.1983 7.69923 30.8873 11.4914 30.8873 14.0195C30.8873 16.5476 30.1983 20.2249 27.9019 20.6845C31.8058 20.4547 34.6764 17.5819 34.6764 14.0195Z"
+              fill="currentColor"></path>
+            <path
+              d="M14.9269 14.0195C14.9269 10.4572 11.9415 7.58432 8.15234 7.35449C10.4488 7.69923 11.1377 11.4914 11.1377 14.0195C11.1377 16.5476 10.4488 20.2249 8.15234 20.6845C11.9415 20.4547 14.9269 17.5819 14.9269 14.0195Z"
+              fill="currentColor"></path>
+            <path
+              d="M0 14.0195C0 10.4572 2.9854 7.58432 6.77456 7.35449C4.4781 7.69923 3.78916 11.4914 3.78916 14.0195C3.78916 16.5476 4.4781 20.2249 6.77456 20.6845C2.9854 20.4547 0 17.5819 0 14.0195Z"
+              fill="currentColor"></path>
+          </svg>
         </div>
-        <div class="hero overflow-y-hidden h-fit" id="hero2">
-          <h1
-            class="text-4xl md:text-[7.7vw] uppercase text-start md:ml-[28vw] w-[70%] ml-[5vw] leading-9 md:leading-[7rem] font-Plain2"
-          >
-            Unique
-          </h1>
+        <div class="nav_sec2 md:flex justify-center items-center hidden font-Plain2 text-sm gap-[2.3vw]">
+          <a class="mag_elem p-1" href="#">Work</a>
+          <a class="mag_elem p-1" href="#">About</a>
+          <a class="mag_elem p-1" href="#">Contact</a>
         </div>
-        <div class="hero overflow-y-hidden h-fit" id="hero3">
-          <div
-            class="text-4xl md:text-[7.7vw] uppercase text-start md:ml-[28vw] w-[70%] ml-[5vw] leading-9 md:leading-[7rem] font-Plain2 flex gap-4"
-          >
-            <h2
-              class="text-4xl md:text-[7.7vw] uppercase text-start leading-9 md:leading-[7rem] font-Plain2 web_text hover:border-none border-b-[4px] md:border-b-[7px] border-white transition-all duration-150"
-            >
-              Web
-            </h2>
-            /
-            <h2
-              class="web_text hover:border-none border-b-[4px] md:border-b-[7px] border-white transition-all duration-150"
-            >
-              Graphic
-            </h2>
-          </div>
-        </div>
-        <div class="hero overflow-y-hidden h-fit" id="hero4">
-          <h1
-            class="text-4xl md:text-[7.7vw] uppercase text-start md:ml-[28vw] w-[70%] ml-[5vw] leading-9 md:leading-[7rem] font-Plain2"
-          >
-            exprience
-          </h1>
-        </div>
-      </section>
-      <section
-        class="w-full h-auto bg-pribg vid_sec pt-[30%] md:pt-[7vh] relative overflow-x-hidden sec2 hidden"
-        data-scroll
-      >
+      </nav>
+      <div class="hero h-fit md:ml-[28vw] w-[70%] p-0 mt-32" id="hero1">
+        <h1
+          class="text-4xl md:text-[7.7vw] uppercase text-start font-Plain2 ml-[5vw] md:ml-0 leading-9 md:leading-[7rem] relative we__design__text">
+          We Design
+        </h1>
+      </div>
+      <div class="hero overflow-y-hidden h-fit" id="hero2">
+        <h1
+          class="text-4xl md:text-[7.7vw] uppercase text-start md:ml-[28vw] w-[70%] ml-[5vw] leading-9 md:leading-[7rem] font-Plain2">
+          Unique
+        </h1>
+      </div>
+      <div class="hero overflow-y-hidden h-fit" id="hero3">
         <div
-          class="video_container w-full h-[40%] md:w-[73vw] md:h-[63vh] relative md:left-[28%]"
-        >
-          <div
-            id="vid_cur"
-            class="md:w-[10vw] md:h-[10vw] flex w-14 h-14 rounded-full bg-[#ffa63d] z-[999] absolute md:flex items-center justify-center right-[45%] top-[40%] md:-top-[10%] md:right-52"
-          >
-            <i class="ri-play-fill text-xl md:text-4xl"></i>
-          </div>
-          <img
-            class="w-full h-full object-cover absolute"
-            src="https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg"
-            alt=""
-          />
-          <video
-            class="w-full h-full object-cover"
-            loop
-            muted
-            src="https://obys.agency/wp-content/uploads/2022/11/Obys-Showreel-2022.mp4"
-          ></video>
-        </div>
-      </section>
-      <section class="w-full min-h-screen mt-10">
-        <div class="md:ml-[28vw] w-full md:w-[65vw] relative p-7">
-          <h1
-            class="text-4xl font-semibold md:text-[7.7rem] uppercase tracking-tighter relative about__obys__text"
-          >
-            our projects
-          </h1>
-          <div
-            class="underline w-full h-[1px] mt-16 md:mt-[10%] bg-zinc-200"
-          ></div>
-        </div>
-        <div class="img-div-cont relative ml-20 flex items-start justify-start flex-wrap gap-12">
-          <div class="img__div w-[24vw] h-[33vw] overflow-hidden ">
-            <img
-            class="h-full w-full object-contain items-center flex-shrink-0 "
-              src="/src/assets/images/Olga_Prudka_1.png"
-              alt=""
-            />
-            <img
-            class="h-full w-full object-contain items-center flex-shrink-0"
-              src="/src/assets/images/Olga_Prudka_2.png"
-              alt=""
-            />
-          </div>
-          <div class="img__div w-[28vw] h-[40vw] overflow-hidden">
-            <img
-            class="h-full w-full object-contain items-center flex-shrink-0"
-              src="/src/assets/images/AIM-1.png"
-              alt=""
-            />
-            <img
-            class="h-full w-full object-contain items-center flex-shrink-0"
-              src="/src/assets/images/AIM-2.png"
-              alt=""
-            />
-          </div>
-          <div class="w-[24vw] h-[24vw] rounded-full border-[1.25px] border-white flex items-center justify-center ml-10 mt-[20%]">
-            <svg class="button__arrow w-24 " viewBox="0 0 91 118" fill="none">
-              <path d="M15.2307 57.4152L15.9378 56.708L15.2307 56.0009L14.5236 56.708L15.2307 57.4152ZM34.9813 77.1658L34.2742 77.8729L35.9813 79.58L35.9813 77.1658L34.9813 77.1658ZM0.151478 72.4944L-0.555622 71.7873L-1.26273 72.4944L-0.555622 73.2015L0.151478 72.4944ZM45.29 117.633L44.5828 118.34L45.29 119.047L45.9971 118.34L45.29 117.633ZM60.3692 102.554L61.0763 103.261L61.7839 102.553L61.0758 101.846L60.3692 102.554ZM60.3685 102.553L59.6614 101.846L58.9538 102.553L59.6619 103.261L60.3685 102.553ZM90.427 72.4944L91.1341 73.2015L91.8412 72.4944L91.1341 71.7873L90.427 72.4944ZM75.3478 57.4152L76.0549 56.7081L75.3478 56.001L74.6407 56.7081L75.3478 57.4152ZM56.3065 76.4565L55.3065 76.4565L55.3065 78.8707L57.0136 77.1636L56.3065 76.4565ZM56.3065 0.120074L57.3065 0.120074L57.3065 -0.879926L56.3065 -0.879926L56.3065 0.120074ZM34.9813 0.120076L34.9813 -0.879924L33.9813 -0.879924L33.9813 0.120076L34.9813 0.120076ZM14.5236 58.1223L34.2742 77.8729L35.6884 76.4587L15.9378 56.708L14.5236 58.1223ZM0.858585 73.2015L15.9378 58.1223L14.5236 56.708L-0.555622 71.7873L0.858585 73.2015ZM45.9971 116.926L0.858585 71.7873L-0.555622 73.2015L44.5828 118.34L45.9971 116.926ZM59.662 101.846L44.5828 116.926L45.9971 118.34L61.0763 103.261L59.662 101.846ZM59.6619 103.261L59.6625 103.261L61.0758 101.846L61.0751 101.845L59.6619 103.261ZM61.0756 103.26L91.1341 73.2015L89.7199 71.7873L59.6614 101.846L61.0756 103.26ZM91.1341 71.7873L76.0549 56.7081L74.6407 58.1223L89.7199 73.2015L91.1341 71.7873ZM74.6407 56.7081L55.5994 75.7494L57.0136 77.1636L76.0549 58.1223L74.6407 56.7081ZM57.3065 76.4565L57.3065 0.120074L55.3065 0.120074L55.3065 76.4565L57.3065 76.4565ZM56.3065 -0.879926L34.9813 -0.879924L34.9813 1.12008L56.3065 1.12007L56.3065 -0.879926ZM33.9813 0.120076L33.9813 77.1658L35.9813 77.1658L35.9813 0.120076L33.9813 0.120076Z" fill="currentColor"></path></svg>
-          </div>
-          <div class="w-[24vw] h-[24vw] rounded-full border-[1.25px] border-white flex items-center justify-center ml-10">
-            <svg class="button__arrow w-24 -rotate-[50deg]" viewBox="0 0 91 118" fill="none">
-              <path d="M15.2307 57.4152L15.9378 56.708L15.2307 56.0009L14.5236 56.708L15.2307 57.4152ZM34.9813 77.1658L34.2742 77.8729L35.9813 79.58L35.9813 77.1658L34.9813 77.1658ZM0.151478 72.4944L-0.555622 71.7873L-1.26273 72.4944L-0.555622 73.2015L0.151478 72.4944ZM45.29 117.633L44.5828 118.34L45.29 119.047L45.9971 118.34L45.29 117.633ZM60.3692 102.554L61.0763 103.261L61.7839 102.553L61.0758 101.846L60.3692 102.554ZM60.3685 102.553L59.6614 101.846L58.9538 102.553L59.6619 103.261L60.3685 102.553ZM90.427 72.4944L91.1341 73.2015L91.8412 72.4944L91.1341 71.7873L90.427 72.4944ZM75.3478 57.4152L76.0549 56.7081L75.3478 56.001L74.6407 56.7081L75.3478 57.4152ZM56.3065 76.4565L55.3065 76.4565L55.3065 78.8707L57.0136 77.1636L56.3065 76.4565ZM56.3065 0.120074L57.3065 0.120074L57.3065 -0.879926L56.3065 -0.879926L56.3065 0.120074ZM34.9813 0.120076L34.9813 -0.879924L33.9813 -0.879924L33.9813 0.120076L34.9813 0.120076ZM14.5236 58.1223L34.2742 77.8729L35.6884 76.4587L15.9378 56.708L14.5236 58.1223ZM0.858585 73.2015L15.9378 58.1223L14.5236 56.708L-0.555622 71.7873L0.858585 73.2015ZM45.9971 116.926L0.858585 71.7873L-0.555622 73.2015L44.5828 118.34L45.9971 116.926ZM59.662 101.846L44.5828 116.926L45.9971 118.34L61.0763 103.261L59.662 101.846ZM59.6619 103.261L59.6625 103.261L61.0758 101.846L61.0751 101.845L59.6619 103.261ZM61.0756 103.26L91.1341 73.2015L89.7199 71.7873L59.6614 101.846L61.0756 103.26ZM91.1341 71.7873L76.0549 56.7081L74.6407 58.1223L89.7199 73.2015L91.1341 71.7873ZM74.6407 56.7081L55.5994 75.7494L57.0136 77.1636L76.0549 58.1223L74.6407 56.7081ZM57.3065 76.4565L57.3065 0.120074L55.3065 0.120074L55.3065 76.4565L57.3065 76.4565ZM56.3065 -0.879926L34.9813 -0.879924L34.9813 1.12008L56.3065 1.12007L56.3065 -0.879926ZM33.9813 0.120076L33.9813 77.1658L35.9813 77.1658L35.9813 0.120076L33.9813 0.120076Z" fill="currentColor"></path></svg>
-          </div>
-          <div class="flex flex-col">
-            <h4 class="text-2xl">ochi</h4>
-          
-          <div class="img__div w-[24vw] h-[33vw] overflow-hidden">
-            <img
-            class="h-full w-full object-contain items-center flex-shrink-0"
-              src="/src/assets/images/OCHI.png"
-              alt=""
-            />
-            <img
-            class="h-full w-full object-contain items-center flex-shrink-0"
-              src="/src/assets/images/OCHI_2-1.png"
-              alt=""
-            />
-          </div>
-        </div>
-          <div class="img__div w-[24vw] h-[33vw] overflow-hidden">
-            <img
-            class="h-full w-full object-contain items-center flex-shrink-0"
-              src="/src/assets/images/Laxer_1-2.png"
-              alt=""
-            />
-            <img
-            class="h-full w-full object-contain items-center flex-shrink-0"
-              src="/src/assets/images/Laxer_2.png"
-              alt=""
-            />
-          </div>
-          <div class="img__div w-[24vw] h-[33vw] overflow-hidden">
-            <img
-            class="h-full w-full object-contain items-center flex-shrink-0"
-              src="/src/assets/images/Éminente_First.png"
-              alt=""
-            />
-            <img
-            class="h-full w-full object-contain items-center flex-shrink-0"
-              src="/src/assets/images/Éminente_Second.png"
-              alt=""
-            />
-          </div>
-          <div class="img__div w-[24vw] h-[33vw] overflow-hidden">
-            <img
-            class="h-full w-full object-contain items-center flex-shrink-0"
-              src="/src/assets/images/Makhno_First.png"
-              alt=""
-            />
-            <img
-            class="h-full w-full object-contain items-center flex-shrink-0"
-              src="/src/assets/images/Makhno_Hover.png"
-              alt=""
-            />
-          </div>
-        </div>
-          </div>
-        </div>
-      </section>
-      <section class="w-full min-h-screen bg-pribg pt-[5vh]" data-scroll>
-        <div
-          id="about__contents"
-          class="md:ml-[28vw] w-full md:w-[65vw] relative pt-16 p-7"
-        >
-          <h1
-            class="text-4xl font-semibold md:text-[7.7rem] uppercase tracking-tighter relative about__obys__text"
-          >
-            About Obys
-          </h1>
-          <div
-            class="underline md:w-full h-[1px] w-full my-[5vw] bg-zinc-200"
-          ></div>
-          <p
-            class="md:w-[60%] text-2xl w-full md:text-[2.5vw] md:leading-[2.5rem] font-Plain1 mb-[4vw]"
-          >
-            Our agency is about people who love creating, designing and
-            developing wow projects. In the same time we are a boutique agency
-            that is more than the collective. We learn and grow, win and
-            celebrate together.
-          </p>
-          <div class="about_img_para flex">
-            <img
-              class="md:w-1/2 w-full h-fit"
-              src="https://obys.agency/wp-content/uploads/2020/07/content-image01.jpg"
-              alt=""
-            />
-            <div class="md:inline-block hidden">
-              <p
-                class="ml-10 font-Plain2 text-sm tracking-wide leading-6 w-[55%] mb-5"
-              >
-                We are happy to present our new website and updated version of
-                Obys agency. As before we are open for new projects worldwide!
-              </p>
-              <p
-                class="ml-10 font-Plain2 text-sm tracking-wide leading-6 w-[55%]"
-              >
-                Would you like to have award winning site or unique branding
-                style, please say hi to our manager —info@obys.agency. <br />
-                And we will help you with the pleasure.
-              </p>
-            </div>
-          </div>
-          <div
-            class="about-marquee__container w-full md:w-1/2 py-[3.8vw] px-[4vw] relative md:-mt-[28vh] md:ml-[22vw] bg-[#3f7df4]"
-          >
-            <div
-              class="flex justify-between items-start py-[2.5vw] border-b border-white"
-            >
-              <h2 class="text-2xl w-[50%] font-Plain2">Awwwards x16</h2>
-              <p class="w-2/5 text-sm font-Plain2">
-                SOTM, SOTD and Honrable Mentions
-              </p>
-            </div>
-            <div
-              class="flex justify-between items-start py-[2.5vw] border-b border-white"
-            >
-              <h2 class="text-2xl w-[50%] font-Plain2">Red Dot Award x1</h2>
-              <p class="w-2/5 text-sm font-Plain2">Best of the Best</p>
-            </div>
-            <div
-              class="flex justify-between items-start py-[2.5vw] border-b border-white"
-            >
-              <h2 class="text-2xl w-[50%] font-Plain2">FWA x11</h2>
-              <p class="w-2/5 text-sm font-Plain2">FWA of The Day</p>
-            </div>
-            <div
-              class="flex justify-between items-start py-[2.5vw] border-b border-white"
-            >
-              <h2 class="text-2xl w-[50%] font-Plain2">CSSDA x23</h2>
-              <p class="w-2/5 text-sm font-Plain2">
-                WOTM, WOTD and UI, UX, Innovation
-              </p>
-            </div>
-            <div
-              class="flex justify-between items-start py-[2.5vw] border-b border-white"
-            >
-              <h2 class="text-2xl w-[50%] font-Plain2">Behance x25</h2>
-              <p class="w-2/5 text-sm font-Plain2">
-                Interaction, Graphic Design
-              </p>
-            </div>
-          </div>
-          <div
-            class="underline w-full h-[1px] mt-16 md:mt-[10%] bg-zinc-200"
-          ></div>
-          <p class="text-sm mt-5 md:mt-10 font-Plain2">We Work With</p>
-        </div>
-      </section>
-      <section
-        data-scroll
-        class="w-full bg-pribg md:h-screen pt-10 relative pointer-events-none pb-10"
-      >
-        <div
-          class="maquee-bottom whitespace-nowrap overflow-x-auto leading-4 md:leading-[4rem] mt-6"
-        >
-          <h1 class="text-[7.7vw] text-transparent uppercase inline-block">
-            fashion - <span class="font-Silkserif2">sport</span> - technology -
-          </h1>
-          <h1 class="text-[7.7vw] text-transparent uppercase inline-block">
-            fashion - <span class="font-Silkserif2">sport</span> - technology -
-          </h1>
-        </div>
-        <div
-          class="maquee-bottom whitespace-nowrap overflow-x-auto leading-4 md:leading-[4rem] pt-6"
-        >
-          <h2 class="text-[7.7vw] text-transparent uppercase inline-block">
-            architecture - <span class="font-Silkserif2">beauty</span> real -
-            estate
+          class="text-4xl md:text-[7.7vw] uppercase text-start md:ml-[28vw] w-[70%] ml-[5vw] leading-9 md:leading-[7rem] font-Plain2 flex gap-4">
+          <h2
+            class="text-4xl md:text-[7.7vw] uppercase text-start leading-9 md:leading-[7rem] font-Plain2 web_text hover:border-none border-b-[4px] md:border-b-[7px] border-white transition-all duration-150">
+            Web
           </h2>
-          <h2 class="text-[7.7vw] text-transparent uppercase inline-block">
-            architecture - <span class="font-Silkserif2">beauty</span> real -
-            estate
+          /
+          <h2
+            class="web_text hover:border-none border-b-[4px] md:border-b-[7px] border-white transition-all duration-150">
+            Graphic
           </h2>
         </div>
-        <div
-          class="maquee-bottom whitespace-nowrap overflow-x-auto leading-4 md:leading-[4rem] pt-6"
-        >
-          <h1 class="text-[7.7vw] text-transparent uppercase inline-block">
-            <span class="font-Silkserif2">Science</span> - partners -
-            <span class="font-Silkserif2 mx-2">Trave</span>-
-          </h1>
-          <h1 class="text-[7.7vw] text-transparent uppercase inline-block">
-            <span class="font-Silkserif2">Science</span> - partners -
-            <span class="font-Silkserif2">Trave</span>
-          </h1>
+      </div>
+      <div class="hero overflow-y-hidden h-fit" id="hero4">
+        <h1
+          class="text-4xl md:text-[7.7vw] uppercase text-start md:ml-[28vw] w-[70%] ml-[5vw] leading-9 md:leading-[7rem] font-Plain2">
+          exprience
+        </h1>
+      </div>
+    </section>
+    <section class="w-full h-auto bg-pribg vid_sec pt-[30%] md:pt-[7vh] relative overflow-x-hidden sec2 "
+      data-scroll>
+      <div class="video_container w-full h-[40%] md:w-[73vw] md:h-[63vh] relative md:left-[28%]">
+        <div id="vid_cur"
+          class="md:w-[10vw] md:h-[10vw] flex w-14 h-14 rounded-full bg-[#ffa63d] z-[999] absolute md:flex items-center justify-center right-[45%] top-[40%] md:-top-[10%] md:right-52">
+          <i class="ri-play-fill text-xl md:text-4xl"></i>
         </div>
-        <div
-          class="maquee-bottom whitespace-nowrap overflow-x-auto leading-4 md:leading-[4rem] pt-6"
-        >
-          <h2 class="text-[7.7vw] text-transparent uppercase inline-block">
-            <span class="font-Silkserif2">Music</span> - Automotive -
-            <span class="font-Silkserif2 mx-2">hotels</span> -
-          </h2>
-          <h2 class="text-[7.7vw] text-transparent uppercase inline-block">
-            <span class="font-Silkserif2">Music</span> - Automotive -
-            <span class="font-Silkserif2">hotels</span>
-          </h2>
-        </div>
-      </section>
-      <footer class="bg-pribg w-full min-h-screen pt-10" data-scroll>
-        <div class="md:ml-[28vw] w-full px-5 md:px-0 md:w-[65vw]">
-          <h1
-            class="text-4xl relative font-Plain2 md:text-[7rem] uppercase tracking-tighter flex gap-5 lets__create_text"
-          >
-            Let's create
-            <i class="ri-arrow-right-fill"></i>
-          </h1>
-          <div
-            class="underline md:w-full h-[1px] w-full my-[8vw] bg-zinc-200"
-          ></div>
-          <div
-            class="footer-content_container md:flex md:justify-between gap-4"
-          >
-            <div class="w-full items-start">
-              <h4 class="font-Plain2 text-lg">Socials</h4>
-              <ul
-                class="font-Plain1 md:font-Plain2 text-2xl md:leading-[1.8rem] mt-8"
-              >
-                <li>Dribbble</li>
-                <li>Behance</li>
-                <li>Instagram</li>
-                <li>Facebook</li>
-                <li>Twitter</li>
-                <li>YouTube</li>
-              </ul>
-            </div>
-            <div class="w-full mt-8 md:mt-0 h-52">
-              <h4 class="font-Plain2 text-lg">Address</h4>
-              <ul
-                class="font-Plain1 md:font-Plain2 text-2xl md:leading-[1.8rem] mt-8"
-              >
-                <li>Zamarstynivska 55</li>
-                <li>79019 Lviv</li>
-                <li>Ukraine</li>
-              </ul>
-            </div>
-            <div class="w-full h-52">
-              <h4 class="font-Plain2 text-lg">Say Hi!</h4>
-              <p
-                class="font-Plain1 md:font-Plain2 text-2xl md:leading-[1.8rem] mt-8"
-              >
-                info@obys.agency
-              </p>
-            </div>
+        <img class="w-full h-full object-cover absolute"
+          src="https://obys.agency/wp-content/uploads/2022/11/Showreel-2022-preview-1.jpg" alt="" />
+        <video class="w-full h-full object-cover" loop muted
+          src="https://obys.agency/wp-content/uploads/2022/11/Obys-Showreel-2022.mp4"></video>
+      </div>
+    </section>
+    <section class="w-full min-h-screen mt-10">
+      <div class="md:ml-[28vw] w-full md:w-[65vw] relative p-7">
+        <h1 class="text-4xl font-semibold md:text-[7.7rem] uppercase tracking-tighter relative about__obys__text">
+          our projects
+        </h1>
+        <div class="underline w-full h-[1px] mt-16 md:mt-[10%] bg-zinc-200"></div>
+      </div>
+      <div class="img-div-cont relative md:ml-20 flex items-start justify-start flex-wrap gap-12 mt-5">
+        <div class="">
+          <div>
+            <h4 class="md:text-4xl text-xl font-Plain2 p-8 md:pl-0 ">OLGA PRUDKA</h4>
           </div>
-          <div
-            class="underline md:w-full h-[1px] w-full mb-[4vh] mt-[8vw] bg-zinc-200"
-          ></div>
-          <p class="font-Plain2 text-sm pb-8 w-full">Obys Agency © 2024</p>
+          <div class="img__div w-full md:w-[24vw] md:h-[33vw] overflow-hidden ">
+            <img class="h-full w-full object-contain items-center flex-sh  rink-0 "
+              src="/src/assets/images/Olga_Prudka_1.png" alt="" />
+            <img class="h-full w-full object-contain items-center flex-shrink-0"
+              src="/src/assets/images/Olga_Prudka_2.png" alt="" />
+          </div>
+          <div class="w-full flex items-center justify-between px-5 mt-4">
+            <h5 class="w-[50%] text-sm">Logo Desgin, Website Desgin, Development</h5>
+            <h6 class="text-sm">2023</h6>
+          </div>
+          <div class="flex justify-center items-center">
+            <div class="underline md:w-full h-[1px] w-11/12 mt-[5vw] md:mt-[2.25vw] bg-zinc-200"></div>
+          </div>
         </div>
-      </footer>
-    </main>
+        <div>
+          <div>
+            <h4 class="md:text-4xl text-xl font-Plain2 p-8 md:pl-0 ">AIM</h4>
+          </div>
+          <div class="img__div  w-full md:w-[30vw] md:h-[40vw] overflow-hidden">
+            <img class="h-full w-full object-contain items-center flex-shrink-0" src="/src/assets/images/AIM-1.png"
+              alt="" />
+            <img class="h-full w-full object-contain items-center flex-shrink-0" src="/src/assets/images/AIM-2.png"
+              alt="" />
+          </div>
+          <div class="w-full flex items-center justify-between px-5 mt-4">
+            <h5 class="w-[50%] text-sm">Logo Desgin, Website Desgin, Development</h5>
+            <h6 class="text-sm">2024</h6>
+          </div>
+          <div class="flex justify-center items-center">
+            <div class="underline md:w-full h-[1px] w-11/12 mt-[5vw] md:mt-[2.25vw] bg-zinc-200"></div>
+          </div>
+        </div>
+        <div
+          class="w-[24vw] group h-[24vw] rounded-full relative border-[1.25px] border-white md:flex items-center justify-center ml-14 mt-[20%] transition-all duration-200 ease-in hidden ">
+          <svg class="button__arrow w-24 " viewBox="0 0 91 118" fill="none">
+            <path
+              d="M15.2307 57.4152L15.9378 56.708L15.2307 56.0009L14.5236 56.708L15.2307 57.4152ZM34.9813 77.1658L34.2742 77.8729L35.9813 79.58L35.9813 77.1658L34.9813 77.1658ZM0.151478 72.4944L-0.555622 71.7873L-1.26273 72.4944L-0.555622 73.2015L0.151478 72.4944ZM45.29 117.633L44.5828 118.34L45.29 119.047L45.9971 118.34L45.29 117.633ZM60.3692 102.554L61.0763 103.261L61.7839 102.553L61.0758 101.846L60.3692 102.554ZM60.3685 102.553L59.6614 101.846L58.9538 102.553L59.6619 103.261L60.3685 102.553ZM90.427 72.4944L91.1341 73.2015L91.8412 72.4944L91.1341 71.7873L90.427 72.4944ZM75.3478 57.4152L76.0549 56.7081L75.3478 56.001L74.6407 56.7081L75.3478 57.4152ZM56.3065 76.4565L55.3065 76.4565L55.3065 78.8707L57.0136 77.1636L56.3065 76.4565ZM56.3065 0.120074L57.3065 0.120074L57.3065 -0.879926L56.3065 -0.879926L56.3065 0.120074ZM34.9813 0.120076L34.9813 -0.879924L33.9813 -0.879924L33.9813 0.120076L34.9813 0.120076ZM14.5236 58.1223L34.2742 77.8729L35.6884 76.4587L15.9378 56.708L14.5236 58.1223ZM0.858585 73.2015L15.9378 58.1223L14.5236 56.708L-0.555622 71.7873L0.858585 73.2015ZM45.9971 116.926L0.858585 71.7873L-0.555622 73.2015L44.5828 118.34L45.9971 116.926ZM59.662 101.846L44.5828 116.926L45.9971 118.34L61.0763 103.261L59.662 101.846ZM59.6619 103.261L59.6625 103.261L61.0758 101.846L61.0751 101.845L59.6619 103.261ZM61.0756 103.26L91.1341 73.2015L89.7199 71.7873L59.6614 101.846L61.0756 103.26ZM91.1341 71.7873L76.0549 56.7081L74.6407 58.1223L89.7199 73.2015L91.1341 71.7873ZM74.6407 56.7081L55.5994 75.7494L57.0136 77.1636L76.0549 58.1223L74.6407 56.7081ZM57.3065 76.4565L57.3065 0.120074L55.3065 0.120074L55.3065 76.4565L57.3065 76.4565ZM56.3065 -0.879926L34.9813 -0.879924L34.9813 1.12008L56.3065 1.12007L56.3065 -0.879926ZM33.9813 0.120076L33.9813 77.1658L35.9813 77.1658L35.9813 0.120076L33.9813 0.120076Z"
+              fill="currentColor"></path>
+          </svg>
+          <div
+          class="circle__in w-full h-full absolute rounded-full top-0 right-0 scale-0 group-hover:scale-100 bg-gray-200 text-black flex items-center justify-center transition-all duration-200 ease-in">
+          <p class="w-[70%] text-sm text-center font-Plain2 scale-0 group-hover:scale-100 transition-all delay-200 duration-200 ease-in">We are thrilled to have you on board. Wo hoped you enjoyed projects❤️</p>
+        </div>
+        </div>
+        <div
+          class="w-[24vw] h-[24vw] rounded-full border-[1.25px] border-white relative group md:flex items-center justify-center ml-10 hidden transition-all duration-200 ease-in">
+          <svg class="button__arrow w-24 -rotate-[50deg]" viewBox="0 0 91 118" fill="none">
+            <path
+              d="M15.2307 57.4152L15.9378 56.708L15.2307 56.0009L14.5236 56.708L15.2307 57.4152ZM34.9813 77.1658L34.2742 77.8729L35.9813 79.58L35.9813 77.1658L34.9813 77.1658ZM0.151478 72.4944L-0.555622 71.7873L-1.26273 72.4944L-0.555622 73.2015L0.151478 72.4944ZM45.29 117.633L44.5828 118.34L45.29 119.047L45.9971 118.34L45.29 117.633ZM60.3692 102.554L61.0763 103.261L61.7839 102.553L61.0758 101.846L60.3692 102.554ZM60.3685 102.553L59.6614 101.846L58.9538 102.553L59.6619 103.261L60.3685 102.553ZM90.427 72.4944L91.1341 73.2015L91.8412 72.4944L91.1341 71.7873L90.427 72.4944ZM75.3478 57.4152L76.0549 56.7081L75.3478 56.001L74.6407 56.7081L75.3478 57.4152ZM56.3065 76.4565L55.3065 76.4565L55.3065 78.8707L57.0136 77.1636L56.3065 76.4565ZM56.3065 0.120074L57.3065 0.120074L57.3065 -0.879926L56.3065 -0.879926L56.3065 0.120074ZM34.9813 0.120076L34.9813 -0.879924L33.9813 -0.879924L33.9813 0.120076L34.9813 0.120076ZM14.5236 58.1223L34.2742 77.8729L35.6884 76.4587L15.9378 56.708L14.5236 58.1223ZM0.858585 73.2015L15.9378 58.1223L14.5236 56.708L-0.555622 71.7873L0.858585 73.2015ZM45.9971 116.926L0.858585 71.7873L-0.555622 73.2015L44.5828 118.34L45.9971 116.926ZM59.662 101.846L44.5828 116.926L45.9971 118.34L61.0763 103.261L59.662 101.846ZM59.6619 103.261L59.6625 103.261L61.0758 101.846L61.0751 101.845L59.6619 103.261ZM61.0756 103.26L91.1341 73.2015L89.7199 71.7873L59.6614 101.846L61.0756 103.26ZM91.1341 71.7873L76.0549 56.7081L74.6407 58.1223L89.7199 73.2015L91.1341 71.7873ZM74.6407 56.7081L55.5994 75.7494L57.0136 77.1636L76.0549 58.1223L74.6407 56.7081ZM57.3065 76.4565L57.3065 0.120074L55.3065 0.120074L55.3065 76.4565L57.3065 76.4565ZM56.3065 -0.879926L34.9813 -0.879924L34.9813 1.12008L56.3065 1.12007L56.3065 -0.879926ZM33.9813 0.120076L33.9813 77.1658L35.9813 77.1658L35.9813 0.120076L33.9813 0.120076Z"
+              fill="currentColor"></path>
+          </svg>
+          <div
+          class="circle__in w-full h-full absolute rounded-full top-0 right-0 scale-0 group-hover:scale-100 bg-gray-200 text-black flex items-center justify-center transition-all duration-200 ease-in">
+          <p class="w-[70%] text-sm text-center font-Plain2 scale-0 group-hover:scale-100 transition-all delay-200 duration-200 ease-in">It will make you WOW!😮</p>
+        </div>
+        </div>
+        <div class="md:translate-y-20">
+          <div>
+            <h4 class="md:text-4xl text-xl font-Plain2 p-8 md:pl-0 ">OCHI</h4>
+          </div>
+          <div class="img__div  w-full md:w-[24vw] md:h-[33vw] overflow-hidden">
+            <img class="h-full w-full object-contain items-center flex-shrink-0" src="/src/assets/images/OCHI.png"
+              alt="" />
+            <img class="h-full w-full object-contain items-center flex-shrink-0" src="/src/assets/images/OCHI_2-1.png"
+              alt="" />
+          </div>
+          <div class="w-full flex items-center justify-between px-5 mt-4">
+            <h5 class="w-[50%] text-sm">Website Desgin, Development</h5>
+            <h6 class="text-sm">2022</h6>
+          </div>
+          <div class="flex justify-center items-center">
+            <div class="underline md:w-full h-[1px] w-11/12 mt-[5vw] md:mt-[2.25vw] bg-zinc-200"></div>
+          </div>
+        </div>
+        <div class="md:-translate-y-24 md:ml-5">
+          <div>
+            <h4 class="md:text-4xl text-xl font-Plain2 p-8 md:pl-0 ">David Laxer</h4>
+          </div>
+          <div class="img__div  w-full md:w-[30vw] md:h-[40vw]  overflow-hidden">
+            <img class="h-full w-full object-contain items-center flex-shrink-0" src="/src/assets/images/Laxer_1-2.png"
+              alt="" />
+            <img class="h-full w-full object-contain items-center flex-shrink-0" src="/src/assets/images/Laxer_2.png"
+              alt="" />
+          </div>
+          <div class="w-full flex items-center justify-between px-5 mt-4">
+            <h5 class="w-[50%] text-sm">Website Desgin, Development</h5>
+            <h6 class="text-sm">2023</h6>
+          </div>
+          <div class="flex justify-center items-center">
+            <div class="underline md:w-full h-[1px] w-11/12 mt-[5vw] md:mt-[2.25vw] bg-zinc-200"></div>
+          </div>
+        </div>
+        <div class="md:-translate-y-[40%]">
+          <div>
+            <h4 class="md:text-4xl text-xl font-Plain2 p-8 md:pl-0 ">Éminente</h4>
+          </div>
+          <div class="img__div  w-full md:w-[24vw] md:h-[33vw] overflow-hidden">
+            <img class="h-full w-full object-contain items-center flex-shrink-0"
+              src="/src/assets/images/Éminente_First.png" alt="" />
+            <img class="h-full w-full object-contain items-center flex-shrink-0"
+              src="/src/assets/images/Éminente_Second.png" alt="" />
+          </div>
+          <div class="w-full flex items-center justify-between px-5 mt-4">
+            <h5 class="w-[50%] text-sm">Logo Desgin, Website Desgin, Development</h5>
+            <h6 class="text-sm">2023</h6>
+          </div>
+          <div class="flex justify-center items-center">
+            <div class="underline md:w-full h-[1px] w-11/12 mt-[5vw] md:mt-[2.25vw] bg-zinc-200"></div>
+          </div>
+        </div>
+        <div class="w-[24vw] h-[24vw] rounded-full border-[1.25px] border-white relative group md:flex items-center justify-center ml-10 mt-[20%] transition-all duration-200 ease-in hidden ">
+          <svg class="button__arrow w-24 -rotate-90" viewBox="0 0 91 118" fill="none">
+            <path d="M15.2307 57.4152L15.9378 56.708L15.2307 56.0009L14.5236 56.708L15.2307 57.4152ZM34.9813 77.1658L34.2742 77.8729L35.9813 79.58L35.9813 77.1658L34.9813 77.1658ZM0.151478 72.4944L-0.555622 71.7873L-1.26273 72.4944L-0.555622 73.2015L0.151478 72.4944ZM45.29 117.633L44.5828 118.34L45.29 119.047L45.9971 118.34L45.29 117.633ZM60.3692 102.554L61.0763 103.261L61.7839 102.553L61.0758 101.846L60.3692 102.554ZM60.3685 102.553L59.6614 101.846L58.9538 102.553L59.6619 103.261L60.3685 102.553ZM90.427 72.4944L91.1341 73.2015L91.8412 72.4944L91.1341 71.7873L90.427 72.4944ZM75.3478 57.4152L76.0549 56.7081L75.3478 56.001L74.6407 56.7081L75.3478 57.4152ZM56.3065 76.4565L55.3065 76.4565L55.3065 78.8707L57.0136 77.1636L56.3065 76.4565ZM56.3065 0.120074L57.3065 0.120074L57.3065 -0.879926L56.3065 -0.879926L56.3065 0.120074ZM34.9813 0.120076L34.9813 -0.879924L33.9813 -0.879924L33.9813 0.120076L34.9813 0.120076ZM14.5236 58.1223L34.2742 77.8729L35.6884 76.4587L15.9378 56.708L14.5236 58.1223ZM0.858585 73.2015L15.9378 58.1223L14.5236 56.708L-0.555622 71.7873L0.858585 73.2015ZM45.9971 116.926L0.858585 71.7873L-0.555622 73.2015L44.5828 118.34L45.9971 116.926ZM59.662 101.846L44.5828 116.926L45.9971 118.34L61.0763 103.261L59.662 101.846ZM59.6619 103.261L59.6625 103.261L61.0758 101.846L61.0751 101.845L59.6619 103.261ZM61.0756 103.26L91.1341 73.2015L89.7199 71.7873L59.6614 101.846L61.0756 103.26ZM91.1341 71.7873L76.0549 56.7081L74.6407 58.1223L89.7199 73.2015L91.1341 71.7873ZM74.6407 56.7081L55.5994 75.7494L57.0136 77.1636L76.0549 58.1223L74.6407 56.7081ZM57.3065 76.4565L57.3065 0.120074L55.3065 0.120074L55.3065 76.4565L57.3065 76.4565ZM56.3065 -0.879926L34.9813 -0.879924L34.9813 1.12008L56.3065 1.12007L56.3065 -0.879926ZM33.9813 0.120076L33.9813 77.1658L35.9813 77.1658L35.9813 0.120076L33.9813 0.120076Z" fill="currentColor"></path></svg>
+            <div
+          class="circle__in w-full h-full absolute rounded-full top-0 right-0 scale-0 group-hover:scale-100 bg-gray-200 text-black flex items-center justify-center transition-all duration-200 ease-in">
+          <p class="w-[70%] text-sm text-center font-Plain2 scale-0 group-hover:scale-100 transition-all delay-200 duration-200 ease-in">We like this color🎨</p>
+        </div>
+        </div>
+        <div class="">
+          <div>
+            <h4 class="md:text-4xl text-xl font-Plain2 p-8 md:pl-0 ">Makhno</h4>
+          </div>
+          <div class="img__div  w-full md:w-[vw] md:h-[33vw] overflow-hidden">
+            <img class="h-full w-full object-contain items-center flex-shrink-0"
+              src="/src/assets/images/Makhno_First.png" alt="" />
+            <img class="h-full w-full object-contain items-center flex-shrink-0"
+              src="/src/assets/images/Makhno_Hover.png" alt="" />
+          </div>
+          <div class="w-full flex items-center justify-between px-5 mt-4">
+            <h5 class="w-[50%] text-sm">Website Desgin, Development</h5>
+            <h6 class="text-sm">2023</h6>
+          </div>
+          <div class="flex justify-center items-center">
+            <div class="underline md:w-full h-[1px] w-11/12 mt-[5vw] md:mt-[2.25vw] bg-zinc-200"></div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </section>
+    <section class="w-full min-h-screen bg-pribg pt-[5vh]" data-scroll>
+      <div id="about__contents" class="md:ml-[28vw] w-full md:w-[65vw] relative pt-16 p-7">
+        <h1 class="text-4xl font-semibold md:text-[7.7rem] uppercase tracking-tighter relative about__obys__text">
+          About Obys
+        </h1>
+        <div class="underline md:w-full h-[1px] w-full my-[5vw] bg-zinc-200"></div>
+        <p class="md:w-[60%] text-2xl w-full md:text-[2.5vw] md:leading-[2.5rem] font-Plain1 mb-[4vw]">
+          Our agency is about people who love creating, designing and
+          developing wow projects. In the same time we are a boutique agency
+          that is more than the collective. We learn and grow, win and
+          celebrate together.
+        </p>
+        <div class="about_img_para flex">
+          <img class="md:w-1/2 w-full h-fit" src="https://obys.agency/wp-content/uploads/2020/07/content-image01.jpg"
+            alt="" />
+          <div class="md:inline-block hidden">
+            <p class="ml-10 font-Plain2 text-sm tracking-wide leading-6 w-[55%] mb-5">
+              We are happy to present our new website and updated version of
+              Obys agency. As before we are open for new projects worldwide!
+            </p>
+            <p class="ml-10 font-Plain2 text-sm tracking-wide leading-6 w-[55%]">
+              Would you like to have award winning site or unique branding
+              style, please say hi to our manager —info@obys.agency. <br />
+              And we will help you with the pleasure.
+            </p>
+          </div>
+        </div>
+        <div
+          class="about-marquee__container w-full md:w-1/2 py-[3.8vw] px-[4vw] relative md:-mt-[28vh] md:ml-[22vw] bg-[#3f7df4]">
+          <div class="flex justify-between items-start py-[2.5vw] border-b border-white">
+            <h2 class="text-2xl w-[50%] font-Plain2">Awwwards x16</h2>
+            <p class="w-2/5 text-sm font-Plain2">
+              SOTM, SOTD and Honrable Mentions
+            </p>
+          </div>
+          <div class="flex justify-between items-start py-[2.5vw] border-b border-white">
+            <h2 class="text-2xl w-[50%] font-Plain2">Red Dot Award x1</h2>
+            <p class="w-2/5 text-sm font-Plain2">Best of the Best</p>
+          </div>
+          <div class="flex justify-between items-start py-[2.5vw] border-b border-white">
+            <h2 class="text-2xl w-[50%] font-Plain2">FWA x11</h2>
+            <p class="w-2/5 text-sm font-Plain2">FWA of The Day</p>
+          </div>
+          <div class="flex justify-between items-start py-[2.5vw] border-b border-white">
+            <h2 class="text-2xl w-[50%] font-Plain2">CSSDA x23</h2>
+            <p class="w-2/5 text-sm font-Plain2">
+              WOTM, WOTD and UI, UX, Innovation
+            </p>
+          </div>
+          <div class="flex justify-between items-start py-[2.5vw] border-b border-white">
+            <h2 class="text-2xl w-[50%] font-Plain2">Behance x25</h2>
+            <p class="w-2/5 text-sm font-Plain2">
+              Interaction, Graphic Design
+            </p>
+          </div>
+        </div>
+        <div class="underline w-full h-[1px] mt-16 md:mt-[10%] bg-zinc-200"></div>
+        <p class="text-sm mt-5 md:mt-10 font-Plain2">We Work With</p>
+      </div>
+    </section>
+    <section data-scroll class="w-full bg-pribg md:h-screen pt-10 relative pointer-events-none pb-10">
+      <div class="maquee-bottom whitespace-nowrap overflow-x-auto leading-4 md:leading-[4rem] mt-6">
+        <h1 class="text-[7.7vw] text-transparent uppercase inline-block">
+          fashion - <span class="font-Silkserif2">sport</span> - technology -
+        </h1>
+        <h1 class="text-[7.7vw] text-transparent uppercase inline-block">
+          fashion - <span class="font-Silkserif2">sport</span> - technology -
+        </h1>
+      </div>
+      <div class="maquee-bottom whitespace-nowrap overflow-x-auto leading-4 md:leading-[4rem] pt-6">
+        <h2 class="text-[7.7vw] text-transparent uppercase inline-block">
+          architecture - <span class="font-Silkserif2">beauty</span> real -
+          estate
+        </h2>
+        <h2 class="text-[7.7vw] text-transparent uppercase inline-block">
+          architecture - <span class="font-Silkserif2">beauty</span> real -
+          estate
+        </h2>
+      </div>
+      <div class="maquee-bottom whitespace-nowrap overflow-x-auto leading-4 md:leading-[4rem] pt-6">
+        <h1 class="text-[7.7vw] text-transparent uppercase inline-block">
+          <span class="font-Silkserif2">Science</span> - partners -
+          <span class="font-Silkserif2 mx-2">Trave</span>-
+        </h1>
+        <h1 class="text-[7.7vw] text-transparent uppercase inline-block">
+          <span class="font-Silkserif2">Science</span> - partners -
+          <span class="font-Silkserif2">Trave</span>
+        </h1>
+      </div>
+      <div class="maquee-bottom whitespace-nowrap overflow-x-auto leading-4 md:leading-[4rem] pt-6">
+        <h2 class="text-[7.7vw] text-transparent uppercase inline-block">
+          <span class="font-Silkserif2">Music</span> - Automotive -
+          <span class="font-Silkserif2 mx-2">hotels</span> -
+        </h2>
+        <h2 class="text-[7.7vw] text-transparent uppercase inline-block">
+          <span class="font-Silkserif2">Music</span> - Automotive -
+          <span class="font-Silkserif2">hotels</span>
+        </h2>
+      </div>
+    </section>
+    <footer class="bg-pribg w-full min-h-screen pt-10" data-scroll>
+      <div class="md:ml-[28vw] w-full px-5 md:px-0 md:w-[65vw]">
+        <h1
+          class="text-4xl relative font-Plain2 md:text-[7rem] uppercase tracking-tighter flex gap-5 lets__create_text">
+          Let's create
+          <i class="ri-arrow-right-fill"></i>
+        </h1>
+        <div class="underline md:w-full h-[1px] w-full my-[8vw] bg-zinc-200"></div>
+        <div class="footer-content_container md:flex md:justify-between gap-4">
+          <div class="w-full items-start">
+            <h4 class="font-Plain2 text-lg">Socials</h4>
+            <ul class="font-Plain1 md:font-Plain2 text-2xl md:leading-[1.8rem] mt-8">
+              <li>Dribbble</li>
+              <li>Behance</li>
+              <li>Instagram</li>
+              <li>Facebook</li>
+              <li>Twitter</li>
+              <li>YouTube</li>
+            </ul>
+          </div>
+          <div class="w-full mt-8 md:mt-0 h-52">
+            <h4 class="font-Plain2 text-lg">Address</h4>
+            <ul class="font-Plain1 md:font-Plain2 text-2xl md:leading-[1.8rem] mt-8">
+              <li>Zamarstynivska 55</li>
+              <li>79019 Lviv</li>
+              <li>Ukraine</li>
+            </ul>
+          </div>
+          <div class="w-full h-52">
+            <h4 class="font-Plain2 text-lg">Say Hi!</h4>
+            <p class="font-Plain1 md:font-Plain2 text-2xl md:leading-[1.8rem] mt-8">
+              info@obys.agency
+            </p>
+          </div>
+        </div>
+        <div class="underline md:w-full h-[1px] w-full mb-[4vh] mt-[8vw] bg-zinc-200"></div>
+        <p class="font-Plain2 text-sm pb-8 w-full">Obys Agency © 2024</p>
+      </div>
+    </footer>
+  </main>
 
-    <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
-      integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    ></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
-    <script
-      type="text/javascript"
-      src="https://unpkg.com/sheryjs/dist/Shery.js"
-    ></script>
-    <!-- Recommended -->
-  </body>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+    integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.js"></script>
+  <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script>
+  <!-- Recommended -->
+</body>
+
 </html>
