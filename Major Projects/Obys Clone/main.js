@@ -1,3 +1,4 @@
+
 function loaderAnimation() {
 
   gsap.registerPlugin(ScrollTrigger);
